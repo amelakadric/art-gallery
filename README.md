@@ -5,6 +5,11 @@
 npm install
 ```
 
+### Installs bootstrap
+```
+npm install bootstrap bootstrap-vue
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
