@@ -3,24 +3,39 @@
     <!-- button for clicking on collapsing menu -->
     <a href="#" class="btn" id="dropdown-menu-btn">...</a>
 
+    <div id="search-btn-container">
+      <button @click="toggleSearchForm" id="search-btn"><i class="fa fa-search" id="search-icon"></i></button>
+    </div>
     <!-- search icon for collapsing search form -->
-    <search-bar id="search-bar"></search-bar>
+    <search-bar id="search-bar" ref="searchRef"></search-bar>
   </aside>
 </template>
 
 <style scoped>
 
-#search-bar{
-  margin-top: 200px;
+.fa.fa-search{
+    color: white;
+}
+
+#search-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+#search-btn{
+  background-color: transparent;
+  border: none;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 100px;
   height: 100%;
-  background-color: blue;
+  background-color: #2a9cd1;
 }
 
 #dropdown-menu-btn {
@@ -75,6 +90,11 @@ import SearchBar from './SearchBar.vue';
 
 export default {
   components: { SearchBar },
-  name: "NavBar"
+  name: "NavBar",
+  methods: {
+    toggleSearchForm() {
+      this.$refs.searchRef.toggleSearchForm();
+    }
+  }
 };
 </script>
