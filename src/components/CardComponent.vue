@@ -56,6 +56,12 @@
         width: 40rem;
         height: 30rem;
     }
+
+    .art-card:hover{
+        text-decoration: underline;
+        text-decoration-color: #2a9cd1;
+    }
+
 </style>
 
 <script>
