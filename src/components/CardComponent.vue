@@ -1,7 +1,7 @@
 <template>
     <div>
     <div class="container">
-      <div class="row">
+      <div class="row" style="align-items: center">
         <div class="col-md-6">
             <b-card class="art-card">
                 <img src="https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGR2YW5nb2doLXNudmdyb2IuanBn.jpg" alt="Image" class="card-image">

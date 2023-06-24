@@ -8,6 +8,7 @@
 
 <style scoped>
     .bg-image{
+        justify-content: center; /* Adjust as needed */
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
@@ -16,9 +17,12 @@
         overflow-x: hidden;
     }
     .bg-wrapper{
+        
+        
         margin-left: 65px;
         width:100vw;
-        height:100vh;
+        min-height: 100vh;
+        height:auto;
         background-color: rgba(0, 0, 0, 0.35);
         text-align: center;
         z-index: 2;
