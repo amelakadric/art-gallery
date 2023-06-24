@@ -42,7 +42,6 @@
       width: 100vw;
       height: 100vh;
       overflow-x: hidden;
-      /* filter: blur(8px); */
   }
   .content{
     z-index: 2;

@@ -1,7 +1,7 @@
 <template>
     <div v-show="showDropDownMenu" class="dropdown">
         <ul>
-            <a href="#"><li>Početna</li></a>
+            <router-link to="/home"><li>Početna</li></router-link>
             <a href="#"><li>Moj nalog</li></a>
             <a href="#"><li>Slikarstvo</li></a>
             <a href="#"><li>Vajarstvo</li></a>
@@ -9,7 +9,7 @@
             <a href="#"><li>Izložba</li></a>
             <a href="#"><li>Umetnici</li></a>
             <a href="#"><li>Kontakt</li></a>
-            <a href="#"><li>O nama</li></a>
+            <router-link to="/aboutus"><li>O nama</li></router-link>
         </ul>
     </div>
 </template>
