@@ -20,10 +20,10 @@
         color: white;
     }
     .dropdown {
-        margin-left: 100px;
+        margin-left: 65px;
         width:100vw;
         height:100vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.65);
         position: fixed;
         top: 50%;
         left: 50%;

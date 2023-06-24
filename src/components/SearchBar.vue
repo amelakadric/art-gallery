@@ -10,8 +10,8 @@
 <style scoped>
     .search-popup {
         position: fixed;
-        top: 46%;
-        left: 245px;
+        top: 47%;
+        left: 209px;
         transform: translate(-50%, -50%);
         z-index: 9999;
         background-color: white;

@@ -34,9 +34,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 65px;
     height: 100%;
-    background-color: #2a9cd1;
+    background-color: #2d89ba;
   }
 
   #dropdown-menu-btn {
