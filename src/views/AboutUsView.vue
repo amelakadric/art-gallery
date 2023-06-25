@@ -6,10 +6,21 @@
                 <h1>O nama</h1>
                 <br><br><br>
                 <p>
-                    Ovaj sajt predstavlja projekat za predmet Veb dizajn.
+                    Ovaj sajt predstavlja projekat za predmet Veb dizajn. Napisacemo neki tekst kasnije.
                 </p>
-                <p>Amela Kadrić 2020/</p>
-                <p>Anja Đurić 2020/0627</p>
+                <p>Nagrada 1</p>
+                <p>Nagrada 2</p>
+                <p>Nagrada 3</p>
+
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6040.322611252452!2d20.439602769267562!3d44.81863110776904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6545727048c5%3A0xd676a195f8f19372!2z0JzRg9C30LXRmCDRgdCw0LLRgNC10LzQtdC90LUg0YPQvNC10YLQvdC-0YHRgtC4!5e0!3m2!1ssr!2srs!4v1687735484040!5m2!1ssr!2srs" 
+                    width="800" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </background-image-component>
         <nav-bar></nav-bar>
