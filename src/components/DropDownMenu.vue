@@ -6,7 +6,7 @@
             <a href="#"><li>Slikarstvo</li></a>
             <a href="#"><li>Vajarstvo</li></a>
             <a href="#"><li>Arhitektura</li></a>
-            <a href="#"><li>Izložba</li></a>
+            <router-link to="/exhibition"><li>Izložba</li></router-link>
             <a href="#"><li>Umetnici</li></a>
             <a href="#"><li>Kontakt</li></a>
             <router-link to="/aboutus"><li>O nama</li></router-link>
