@@ -15,7 +15,7 @@ const allArtists = [
         id: 2,
         name: "Miron",
         bio: "Kratka biografija..",
-        photo: ""
+        photo: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const allArtists = [
         id: 4,
         name: "Aleksandros od Antilohije",
         bio: "Kratka biografija..",
-        photo: ""
+        photo: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
     },
     {
         id: 5,

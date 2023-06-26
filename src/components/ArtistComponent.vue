@@ -1,11 +1,17 @@
 <template>
     <div id="artist">
         <b-card class="art-card">
-                <img :src="myartist.photo" alt="Image" class="card-image">
-                <div class="card-body">
-                    <h5 class="card-title">{{myartist.name}}</h5>
-                    <p class="card-text">{{myartist.bio}}</p>
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img :src="myartist.photo" alt="Image" class="card-image">
                 </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ myartist.name }}</h5>
+                        <p class="card-text">{{ myartist.bio }}</p>
+                    </div>
+                </div>
+            </div>
         </b-card>
     </div>
 </template>
