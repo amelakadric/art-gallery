@@ -49,7 +49,6 @@
 <script>
 // @ is an alias to /src
 import NavBar from "@/components/NavBar.vue";
-import CardComponent from '@/components/CardComponent.vue';
 import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue';
 import ShowArtists from '@/components/ShowArtists.vue';
 
@@ -57,7 +56,6 @@ export default {
   name: "HomeView",
   components: {
     NavBar,
-    CardComponent,
     BackgroundImageComponent,
     ShowArtists,
   },

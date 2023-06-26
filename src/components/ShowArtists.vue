@@ -3,7 +3,7 @@
         <table>
             <tr v-for='artist in artists' :key="artist.id">
                 <td>
-                    <Artist :myartist='artist'></Artist>
+                    <ArtistComponent :myartist='artist'></ArtistComponent>
                 </td>
                 
             </tr>
@@ -25,16 +25,21 @@
 
 <script>
     import allArtists from '../data/artists.js'
-    import Artist from './ArtistComponent.vue'
+    import ArtistComponent from './ArtistComponent.vue'
 
     export default{
         name: 'ShowArtists',
         components: {
-            Artist
+            ArtistComponent
         },
         data(){
             return {
                 artists: allArtists
+            }
+        },
+        created(){
+            if(localStorage.getItem('allArtists')==null){
+                localStorage.setItem('allArtists', JSON.stringify(allArtists))
             }
         }
     }
