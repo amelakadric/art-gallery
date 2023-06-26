@@ -9,6 +9,7 @@
             </div>
           </div>
           <br><br>
+          
           <div class="row">
             <div class="col-sm-12" style="text-align: center;">
               <div class="citation">
@@ -18,12 +19,15 @@
             </div>
           </div>
           <br><br>
-          <div class="row">
-            <div class="col-sm-12" style="align-items: center;">
-              <card-component></card-component>
-            </div>
+
+          <div id="centered-content">
+              <div class="row">
+                <div class="col-sm-12" style="align-items: center;">
+                  <card-component></card-component>
+                </div>
+              </div>
           </div>
-          
+
         </div>
     </background-image-component>
     
