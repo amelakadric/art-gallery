@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutsUsView from '../views/AboutUsView.vue'
 import ExhibitionView from '../views/ExhibitionView.vue'
+import ContactUsView from '../views/ContactUsView.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/exhibition',
     name: 'exhibition',
     component: ExhibitionView
+  },
+  {
+    path: '/contactus',
+    name: 'contactus',
+    component: ContactUsView
   }
 ]
 

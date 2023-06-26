@@ -8,7 +8,7 @@
             <a href="#"><li>Arhitektura</li></a>
             <router-link to="/exhibition"><li>Izložba</li></router-link>
             <a href="#"><li>Umetnici</li></a>
-            <a href="#"><li>Kontakt</li></a>
+            <router-link to="/contactus"><li>Kontakt</li></router-link>
             <router-link to="/aboutus"><li>O nama</li></router-link>
         </ul>
     </div>
