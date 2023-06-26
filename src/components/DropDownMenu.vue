@@ -7,7 +7,7 @@
             <a href="#"><li>Vajarstvo</li></a>
             <a href="#"><li>Arhitektura</li></a>
             <router-link to="/exhibition"><li>Izložba</li></router-link>
-            <a href="#"><li>Umetnici</li></a>
+            <router-link to="/artists"><li>Umetnici</li></router-link>
             <router-link to="/contactus"><li>Kontakt</li></router-link>
             <router-link to="/aboutus"><li>O nama</li></router-link>
         </ul>

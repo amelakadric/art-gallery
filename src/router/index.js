@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutsUsView from '../views/AboutUsView.vue'
 import ExhibitionView from '../views/ExhibitionView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
+import ArtistsView from '../views/ArtistsView.vue'
 
 Vue.use(VueRouter)
 
@@ -27,7 +28,12 @@ const routes = [
     path: '/contactus',
     name: 'contactus',
     component: ContactUsView
-  }
+  },
+  {
+    path: '/artists',
+    name: 'artists',
+    component: ArtistsView
+  },
 ]
 
 const router = new VueRouter({
