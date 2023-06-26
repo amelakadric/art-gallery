@@ -48,3 +48,5 @@ const allArtists = [
         photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpM5Ma1HITu2aAnyqNxEw1wD2DQVyT3bNxyCoAwM_ObI2v_vRC-PQM9VEjaAw2Uz_PVJA&usqp=CAU"
     },
 ]
+
+export default allArtists;

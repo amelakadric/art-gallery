@@ -1,6 +1,5 @@
 <template>
     <div id='showartists'>
-        <p>uslo</p>
         <table>
             <tr v-for='artist in artists' :key="artist.id">
                 <td>
