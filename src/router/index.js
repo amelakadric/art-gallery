@@ -9,6 +9,7 @@ import MyAccountView from "../views/MyAccountView.vue";
 import PaintingsView from "../views/PaintingsView.vue";
 import SculptureView from "../views/SculptureView.vue";
 import ArchitectureView from "../views/ArchitectureView.vue";
+import ArtworkDetailsView from "../views/ArtworkDetailsView.vue";
 
 Vue.use(VueRouter);
 
@@ -62,6 +63,11 @@ const routes = [
     path: "/architecture",
     name: "architecture",
     component: ArchitectureView,
+  },
+  {
+    name: "ArtworkDetailsView",
+    path: "/artwork/:id",
+    component: ArtworkDetailsView,
   },
 ];
 

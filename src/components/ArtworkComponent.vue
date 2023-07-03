@@ -5,7 +5,7 @@
         ><h2>{{ art.title }}</h2></b-card-title
       >
       <b-card-text>
-        <p>Author: {{ art.author }}</p>
+        <p>{{ art.author }}</p>
       </b-card-text>
     </b-card>
 
@@ -37,6 +37,11 @@ export default {
     art: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    goToArtworkDetail() {
+      this.$router.push(`/artwork/${this.art.id}`);
     },
   },
 };

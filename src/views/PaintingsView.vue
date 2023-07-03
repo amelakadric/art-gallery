@@ -13,7 +13,14 @@
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
-          <ArtworkComponent :art="art"></ArtworkComponent>
+          <router-link
+            :to="{
+              name: 'ArtworkDetailsView',
+              params: { id: art.id },
+            }"
+          >
+            <ArtworkComponent :art="art"></ArtworkComponent>
+          </router-link>
         </div>
       </div>
     </background-image-component>
