@@ -4,7 +4,7 @@
       <router-link to="/home"><li>Početna</li></router-link>
       <a href="/myAccount"><li>Moj nalog</li></a>
       <a href="/paintings"><li>Slikarstvo</li></a>
-      <a href="#"><li>Vajarstvo</li></a>
+      <a href="/sculptures"><li>Vajarstvo</li></a>
       <a href="#"><li>Arhitektura</li></a>
       <router-link to="/exhibition"><li>Izložba</li></router-link>
       <router-link to="/artists"><li>Umetnici</li></router-link>

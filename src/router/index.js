@@ -7,6 +7,8 @@ import ContactUsView from "../views/ContactUsView.vue";
 import ArtistsView from "../views/ArtistsView.vue";
 import MyAccountView from "../views/MyAccountView.vue";
 import PaintingsView from "../views/PaintingsView.vue";
+import SculptureView from "../views/SculptureView.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -49,6 +51,11 @@ const routes = [
     path: "/paintings",
     name: "paintings",
     component: PaintingsView,
+  },
+  {
+    path: "/sculptures",
+    name: "sculptures",
+    component: SculptureView,
   },
 ];
 

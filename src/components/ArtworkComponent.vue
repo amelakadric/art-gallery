@@ -19,7 +19,7 @@
   border: 1px solid transparent;
   background-color: rgba(247, 244, 244, 0.1) !important;
   backdrop-filter: blur(10px);
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
 }
 img {
   margin: 2rem 0 2rem 10rem;

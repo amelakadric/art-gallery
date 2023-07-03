@@ -3,11 +3,12 @@
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
-      <h1>Slikarstvo</h1>
+      <h1>Vajarstvo</h1>
 
       <p>
-        ,,Slikarstvo je za mene samo sredstvo da zaboravim život.
-        <br />Krik u noći. Suzdržani jecaj. Prigušeni smeh.” <br />-Žorž Ruo
+        ,,Svaki komad stene ima statuu unutar sebe, a zadatak skulptora je da tu
+        statuu pronađe.”
+        <br />-Mikelanđelo
       </p>
       <br />
 
@@ -65,7 +66,7 @@ export default {
   },
   computed: {
     filteredArts() {
-      return this.allArts.filter((art) => art.type === 0);
+      return this.allArts.filter((art) => art.type === 1);
     },
   },
   mounted() {
@@ -74,7 +75,7 @@ export default {
   methods: {
     setBackgroundImage() {
       this.$refs.backgroundImgRef.setBackgroundImage(
-        "https://i0.wp.com/marcusashley.com/wp-content/uploads/2021/11/red-museum-gallery-wall.jpg?w=640&ssl=1"
+        "https://www.samsoriginalart.com/cdn/shop/articles/b3564315ec59f69660ce6d5f1cb5bf15.jpg?v=1642480841"
       );
     },
   },

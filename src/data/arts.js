@@ -33,7 +33,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 1,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG/330px-Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 1,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/%27David%27_by_Michelangelo_Fir_JBU002.jpg/375px-%27David%27_by_Michelangelo_Fir_JBU002.jpg",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 1,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9c/MG-Paris-Aphrodite_of_Milos.jpg",
   },
   {
     id: 6,
