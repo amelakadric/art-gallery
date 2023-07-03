@@ -5,7 +5,7 @@
 
       <h1>Slikarstvo</h1>
 
-      <p>
+      <p class="citation">
         ,,Slikarstvo je za mene samo sredstvo da zaboravim život.
         <br />Krik u noći. Suzdržani jecaj. Prigušeni smeh.” <br />-Žorž Ruo
       </p>
@@ -29,6 +29,9 @@
   </div>
 </template>
 <style scoped>
+.citation {
+  font-style: italic;
+}
 .paintings {
   color: white;
   text-align: center;

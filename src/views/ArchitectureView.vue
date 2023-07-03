@@ -1,11 +1,11 @@
 <template>
-  <div class="paintings">
+  <div class="architecture">
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
       <h1>Arhitektura</h1>
 
-      <p>
+      <p class="citation">
         ,,Arhitektura je izraz vrednosti. Način na koji gradimo je odraz načina
         na koji živimo”
         <br />-Norman Foster
@@ -14,7 +14,14 @@
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
-          <ArtworkComponent :art="art"></ArtworkComponent>
+          <router-link
+            :to="{
+              name: 'ArtworkDetailsView',
+              params: { id: art.id },
+            }"
+          >
+            <ArtworkComponent :art="art"></ArtworkComponent>
+          </router-link>
         </div>
       </div>
     </background-image-component>
@@ -23,7 +30,10 @@
   </div>
 </template>
 <style scoped>
-.paintings {
+.citation {
+  font-style: italic;
+}
+.architecture {
   color: white;
   text-align: center;
   /* margin: 0; */

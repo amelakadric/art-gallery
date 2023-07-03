@@ -23,8 +23,8 @@
 }
 img {
   margin: 2rem 0 2rem 10rem;
-  width: 10rem;
-  /* height: 10rem; */
+  max-width: 12rem;
+  max-height: 10rem;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 5px black;
 }

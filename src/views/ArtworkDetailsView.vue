@@ -84,7 +84,9 @@ h2 {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50rem;
+  max-height: 30rem;
+  /* width: 20rem; */
   margin-top: 2rem;
   box-shadow: 2px 2px 5px black;
 }

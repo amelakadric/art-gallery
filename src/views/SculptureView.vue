@@ -1,11 +1,11 @@
 <template>
-  <div class="paintings">
+  <div class="sculptures">
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
       <h1>Vajarstvo</h1>
 
-      <p>
+      <p class="citation">
         ,,Svaki komad stene ima statuu unutar sebe, a zadatak skulptora je da tu
         statuu pronađe.”
         <br />-Mikelanđelo
@@ -14,7 +14,14 @@
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
-          <ArtworkComponent :art="art"></ArtworkComponent>
+          <router-link
+            :to="{
+              name: 'ArtworkDetailsView',
+              params: { id: art.id },
+            }"
+          >
+            <ArtworkComponent :art="art"></ArtworkComponent>
+          </router-link>
         </div>
       </div>
     </background-image-component>
@@ -23,7 +30,10 @@
   </div>
 </template>
 <style scoped>
-.paintings {
+.citation {
+  font-style: italic;
+}
+.sculptures {
   color: white;
   text-align: center;
   /* margin: 0; */

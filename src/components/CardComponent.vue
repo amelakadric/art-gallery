@@ -10,7 +10,9 @@
               class="card-image"
             />
             <div class="card-body">
-              <h5 class="card-title">Slikarstvo</h5>
+              <a href="/paintings">
+                <h5 class="card-title">Slikarstvo</h5>
+              </a>
             </div>
           </b-card>
         </div>
@@ -22,7 +24,9 @@
               class="card-image"
             />
             <div class="card-body">
-              <h5 class="card-title">Vajarstvo</h5>
+              <a href="/sculptures">
+                <h5 class="card-title">Vajarstvo</h5>
+              </a>
             </div>
           </b-card>
         </div>
@@ -37,7 +41,9 @@
               class="card-image"
             />
             <div class="card-body">
-              <h5 class="card-title">Arhitektura</h5>
+              <a href="/architecture">
+                <h5 class="card-title">Arhitektura</h5>
+              </a>
             </div>
           </b-card>
         </div>
@@ -49,7 +55,9 @@
               class="card-image"
             />
             <div class="card-body">
-              <h5 class="card-title">Izložba</h5>
+              <a href="/exhibition">
+                <h5 class="card-title">Izložba</h5>
+              </a>
             </div>
           </b-card>
         </div>
@@ -58,8 +66,13 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 @import "bootstrap/dist/css/bootstrap.css";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .card-image {
   width: 35rem;
