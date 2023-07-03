@@ -5,7 +5,7 @@
       <a href="/myAccount"><li>Moj nalog</li></a>
       <a href="/paintings"><li>Slikarstvo</li></a>
       <a href="/sculptures"><li>Vajarstvo</li></a>
-      <a href="#"><li>Arhitektura</li></a>
+      <a href="/architecture"><li>Arhitektura</li></a>
       <router-link to="/exhibition"><li>Izložba</li></router-link>
       <router-link to="/artists"><li>Umetnici</li></router-link>
       <router-link to="/contactus"><li>Kontakt</li></router-link>

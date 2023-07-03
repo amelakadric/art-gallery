@@ -60,7 +60,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 2,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/medium_jpg/sfpassio.jpg?1381253501",
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 2,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://static.nationalgeographic.rs/Picture/41062/jpeg/krivi-toranj-u-pizi_248741038?ts=2021-10-01T13:22:05",
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ let allArts = [
     desc: "Neki opis..",
     type: 2,
     imageUrl:
-      "https://media.npr.org/assets/img/2012/04/30/scream_custom-9ef574d2014bd441879317ecf242ad060e34e743-s1100-c50.jpg",
+      "https://media.architecturaldigest.com/photos/5762c8bb7b6409155b8709cb/1:1/w_2133,h_2133,c_limit/taj-mahal-getty-images.jpg",
   },
 ];
 

@@ -8,6 +8,7 @@ import ArtistsView from "../views/ArtistsView.vue";
 import MyAccountView from "../views/MyAccountView.vue";
 import PaintingsView from "../views/PaintingsView.vue";
 import SculptureView from "../views/SculptureView.vue";
+import ArchitectureView from "../views/ArchitectureView.vue";
 
 Vue.use(VueRouter);
 
@@ -56,6 +57,11 @@ const routes = [
     path: "/sculptures",
     name: "sculptures",
     component: SculptureView,
+  },
+  {
+    path: "/architecture",
+    name: "architecture",
+    component: ArchitectureView,
   },
 ];
 
