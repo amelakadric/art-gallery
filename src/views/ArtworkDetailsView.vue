@@ -48,6 +48,32 @@
           </div>
         </b-col>
       </b-row>
+      <b-row class="col-sm-12 container d-flex flex-row justify-content center">
+        <b-col cols="8" class="col-sm-8 text-center">
+          <div
+            id="listgroup-ex"
+            style="position: relative; overflow-y: auto; height: 300px"
+          >
+            <h2 style="margin-right: 4rem">Poruke</h2>
+
+            <div
+              v-for="message of filteredMessages"
+              :key="message.id"
+              class="container col-sm-8 text-center"
+            >
+              <b-card class="cardPonude">
+                <b-card-title class=""
+                  ><h4>Poruka {{ message.id }}</h4></b-card-title
+                >
+                <b-card-text>
+                  <p>user: {{ message.username }}</p>
+                  <p>poruka: {{ message.text }}</p>
+                </b-card-text>
+              </b-card>
+            </div>
+          </div>
+        </b-col>
+      </b-row>
       <FormComponent></FormComponent>
     </background-image-component>
 
@@ -96,6 +122,8 @@ img {
 <script>
 import allArts from "@/data/arts";
 import allOffers from "@/data/offers.js";
+import allMessages from "@/data/messages.js";
+
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import FormComponent from "@/components/FormComponent.vue";
@@ -117,7 +145,9 @@ export default {
       allArts: allArts,
       artwork: null,
       offers: null,
+      messages: null,
       filteredOffers: null,
+      filteredMessages: null,
     };
   },
   mounted() {
@@ -131,6 +161,13 @@ export default {
     }
     this.fetchArtwork();
     this.filteredOffers = this.filterOffers();
+
+    this.messages = localStorage.getItem("allMessages");
+    if (!this.messages) this.messages = allMessages;
+    else {
+      this.messages = JSON.parse(this.messages);
+    }
+    this.filteredMessages = this.filterMessages();
   },
 
   methods: {
@@ -145,6 +182,11 @@ export default {
     },
     filterOffers() {
       return this.offers.filter((offer) => offer.artId === this.artwork.id);
+    },
+    filterMessages() {
+      return this.messages.filter(
+        (message) => message.artistName === this.artwork.author
+      );
     },
   },
 };

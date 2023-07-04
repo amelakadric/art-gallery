@@ -35,12 +35,15 @@
 
 <script>
 import allOffers from "@/data/offers";
+import allArts from "@/data/arts";
+import allMessages from "@/data/messages";
 export default {
   name: "FormComponent",
   data() {
     return {
       numberValue: "",
       textareaValue: "",
+      messages: null,
       offers: null,
     };
   },
@@ -49,6 +52,11 @@ export default {
     if (!this.offers) this.offers = allOffers;
     else {
       this.offers = JSON.parse(this.offers);
+    }
+    this.messages = localStorage.getItem("allMessages");
+    if (!this.messages) this.messages = allMessages;
+    else {
+      this.messages = JSON.parse(this.messages);
     }
   },
   methods: {
@@ -72,6 +80,18 @@ export default {
     submitFormMessage() {
       console.log("Textarea:", this.textareaValue);
       if (this.textareaValue != "") this.porukaUmetniku = this.textareaValue;
+      let artId = parseInt(this.$route.params.id);
+      const art = allArts.find((art) => art.id === artId);
+      let id = this.messages[this.messages.length - 1].id + 1;
+      const username = localStorage.getItem("username");
+
+      this.messages.push({
+        id: id,
+        artistName: art.author,
+        username: username,
+        text: this.textareaValue,
+      });
+      localStorage.setItem("allMessages", JSON.stringify(this.messages));
     },
   },
 };

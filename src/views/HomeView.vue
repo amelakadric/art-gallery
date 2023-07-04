@@ -59,6 +59,7 @@ import NavBar from "@/components/NavBar.vue";
 import CardComponent from "@/components/CardComponent.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import allOffers from "@/data/offers";
+import allMessages from "@/data/messages";
 export default {
   name: "HomeView",
   components: {
@@ -68,6 +69,8 @@ export default {
   },
   created() {
     localStorage.setItem("allOffers", JSON.stringify(allOffers));
+    localStorage.setItem("allMessages", JSON.stringify(allMessages));
+
     localStorage.setItem("username", "user123");
   },
   mounted() {
