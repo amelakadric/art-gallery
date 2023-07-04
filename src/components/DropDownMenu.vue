@@ -1,61 +1,61 @@
 <template>
   <div v-show="showDropDownMenu" class="dropdown">
     <ul>
-      <router-link to="/homesrb"><li>Početna</li></router-link>
-      <a href="/myAccountsrb"><li>Moj nalog</li></a>
+      <router-link to="/homesrb"><li>{{pocetna}}</li></router-link>
+      <a href="/myAccountsrb"><li>{{mojnalog}}</li></a>
       <!-- <a href="/arts"><li>Umetnine</li></a> -->
-      <li @mouseenter="toggleArts()">Umetnine
+      <li @mouseenter="toggleArts()">{{umetnine}}
         <ul v-show="showArts">
           <router-link to="/paintingssrb">
-            <li @mouseenter="togglePaintings()">Slikarstvo
+            <li @mouseenter="togglePaintings()">{{slikarstvo}}
               <ul v-show="showPaintings">
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 0 },}"><li style="font-size: 30px">Vrisak - Edvund Mund</li></router-link>
+                  params: { id: 0 },}"><li style="font-size: 30px">{{slika1}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 1 },}"><li style="font-size: 30px">Poslednja večera - Leonardo da Vinči</li></router-link>
+                  params: { id: 1 },}"><li style="font-size: 30px">{{slika2}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 2 },}"><li style="font-size: 30px">Mona Liza - Leonardo da Vinči</li></router-link>
+                  params: { id: 2 },}"><li style="font-size: 30px">{{slika3}}</li></router-link>
               </ul>
             </li></router-link>
           <router-link to="/sculpturessrb">
-            <li @mouseenter="toggleSculptures()">Vajarstvo
+            <li @mouseenter="toggleSculptures()">{{vajarstvo}}
               <ul v-show="showSculptures" class="inside">
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 3 },}"><li style="font-size: 30px">Bacač diska - Miron</li></router-link>
+                  params: { id: 3 },}"><li style="font-size: 30px">{{vaj1}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 4 },}"><li style="font-size: 30px">Mikelanđelov David - Mikelanđelo Buanoroti</li></router-link>
+                  params: { id: 4 },}"><li style="font-size: 30px">{{vaj2}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 5 },}"><li style="font-size: 30px">Miloska Venera - Aleksandros od Antilohije</li></router-link>
+                  params: { id: 5 },}"><li style="font-size: 30px">{{vaj3}}</li></router-link>
               </ul>
             </li></router-link>
           <router-link to="/architecturesrb">
-            <li @mouseenter="toggleArchitecture()">Arhitektura
+            <li @mouseenter="toggleArchitecture()">{{arhitektura}}
               <ul v-show="showArchitecture" class="inside">
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 6 },}"><li style="font-size: 30px">La Sagrada Familia - Antoni Gaudi</li></router-link>
+                  params: { id: 6 },}"><li style="font-size: 30px">{{arh1}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 7 },}"><li style="font-size: 30px">Krivi toranj u Pizi - Bonano Pizano</li></router-link>
+                  params: { id: 7 },}"><li style="font-size: 30px">{{arh2}}</li></router-link>
                 <router-link :to="{
                   name: 'ArtworkDetailsView',
-                  params: { id: 8 },}"><li style="font-size: 30px">Taj Mahal - Ustad Ahmad Lahori</li></router-link>
+                  params: { id: 8 },}"><li style="font-size: 30px">{{arh3}}</li></router-link>
               </ul>
             </li>
           </router-link>
         </ul>
       </li>
       
-      <router-link to="/exhibitionsrb"><li>Izložba</li></router-link>
-      <router-link to="/artistssrb"><li>Umetnici</li></router-link>
-      <router-link to="/contactussrb"><li>Kontakt</li></router-link>
-      <router-link to="/aboutussrb"><li>O nama</li></router-link>
+      <router-link to="/exhibitionsrb"><li>{{izlozba}}</li></router-link>
+      <router-link to="/artistssrb"><li>{{umetnici}}</li></router-link>
+      <router-link to="/contactussrb"><li>{{kontakt}}</li></router-link>
+      <router-link to="/aboutussrb"><li>{{onama}}</li></router-link>
     </ul>
   </div>
 </template>
@@ -107,7 +107,26 @@ export default {
       showArts: false,
       showPaintings: false,
       showSculptures: false,
-      showArchitecture: false
+      showArchitecture: false,
+      pocetna: '',
+      mojnalog: '',
+      umetnine: '',
+      slikarstvo: '',
+      arhitektura: '',
+      vajarstvo: '',
+      slika1: '',
+      slika2: '',
+      slika3: '',
+      vaj1: '',
+      vaj2: '',
+      vaj3: '',
+      arh1: '',
+      arh2: '',
+      arh3: '',
+      izlozba: '',
+      umetnici:'',
+      kontakt: '',
+      onama: ''
     };
   },
   methods: {
@@ -127,5 +146,44 @@ export default {
       this.showArchitecture = !this.showArchitecture;
     }
   },
+  created(){
+    if(localStorage.getItem("language") == "RS"){
+      this.pocetna = "Početna";
+      this.mojnalog = "Moj nalog";
+      this.umetnine = "Umetnine";
+      this.slikarstvo = "Slikarstvo";
+      this.slika1 = "Vrisak - Edvund Mund";
+      this.slika2 = "Poslednja večera - Leonardo da Vinči";
+      this.slika3 = "Mona Liza - Leonardo da Vinči";
+      this.vaj1 = "Bacač diska - Miron";
+      this.vaj2 = "Mikelanđelov David - Mikelanđelo Buanoroti";
+      this.vaj3 = "Miloska Venera - Aleksandros od Antilohije";
+      this.arh1 = "La Sagrada Familia - Antoni Gaudi";
+      this.arh2 = "Krivi toranj u Pizi - Bonano Pizano";
+      this.arh3 = "Taj Mahal - Ustad Ahmad Lahori";
+      this.kontakt = "Kontakt";
+      this.onama = "O nama";
+    }
+    else{
+      this.pocetna = "Home";
+      this.mojnalog = "My account";
+      this.umetnine = "Arts";
+      this.slikarstvo = "Painting";
+      this.vajarstvo = "Sculpture";
+      this.arhitektura = "Architecture";
+      this.slika1 = "The Scream - Edvund Munch";
+      this.slika2 = "Last supper - Leonardo da Vinci";
+      this.slika3 = "Mona Lisa - Leonardo da Vinci";
+      this.vaj1 = "Disk Thrower - Miron";
+      this.vaj2 = "David - Michelangelo Buonarroti";
+      this.vaj3 = "Venus - Aleksandros of Antilohije";
+      this.arh1 = "La Sagrada Familia - Antoni Gaudi";
+      this.arh2 = "Leaning Tower of Pisa - Bonano Pizano";
+      this.arh3 = "Taj Mahal - Ustad Ahmad Lahori";
+      this.izlozba = "Exhibition";
+       this.kontakt = "Contact";
+      this.onama = "About us";
+    }
+  }
 };
 </script>
