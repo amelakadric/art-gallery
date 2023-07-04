@@ -24,17 +24,20 @@
         </div>
         <br /><br />
 
-        <div id="centered-content">
-          <div class="row">
-            <div class="col-sm-12" style="align-items: center">
-              <card-component></card-component>
-            </div>
+          <div id="centered-content">
+              <div class="row">
+                <div class="col-sm-12" style="align-items: center;">
+                  <card-component></card-component>
+                </div>
+              </div>
           </div>
+          <footer-comp></footer-comp>
         </div>
-      </div>
     </background-image-component>
 
     <NavBar></NavBar>
+    
+    
   </div>
 </template>
 
@@ -56,16 +59,19 @@ h1 {
 <script>
 // @ is an alias to /src
 import NavBar from "@/components/NavBar.vue";
-import CardComponent from "@/components/CardComponent.vue";
-import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
-import allOffers from "@/data/offers";
-import allMessages from "@/data/messages";
+import CardComponent from '@/components/CardComponent.vue';
+import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue';
+import FooterComp from '@/components/FooterComp.vue'
+import allOffers from '@/data/offers.js'
+import allMessages from '@/data/messages.js'
+
 export default {
   name: "HomeView",
   components: {
     NavBar,
     CardComponent,
     BackgroundImageComponent,
+    FooterComp
   },
   created() {
     localStorage.setItem("allOffers", JSON.stringify(allOffers));

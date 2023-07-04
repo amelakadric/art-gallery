@@ -23,6 +23,7 @@
             <show-artists></show-artists>
 
         </div>
+        <footer-comp></footer-comp>
     </background-image-component>
     
     <NavBar></NavBar>
@@ -51,6 +52,7 @@
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue';
 import ShowArtists from '@/components/ShowArtists.vue';
+import FooterComp from '@/components/FooterComp.vue';
 
 export default {
   name: "HomeView",
@@ -58,6 +60,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     ShowArtists,
+    FooterComp
   },
   mounted(){
     this.setBackgroundImage();

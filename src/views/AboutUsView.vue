@@ -22,6 +22,7 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
+            <footer-comp></footer-comp>
         </background-image-component>
         <nav-bar></nav-bar>
     </div>
@@ -40,8 +41,9 @@
 <script>
 import NavBar from "@/components/NavBar.vue"
 import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue'
+import FooterComp from '@/components/FooterComp.vue'
 export default {
-  components: { NavBar, BackgroundImageComponent },
+  components: { NavBar, BackgroundImageComponent, FooterComp },
   mounted() {
     this.setBackgroundImage();
   },
