@@ -116,9 +116,39 @@ export default {
       if(this.setLanguage=="RS") this.setLanguage = "ENG";
       else this.setLanguage="RS";
       localStorage.setItem("language", this.setLanguage);
+      window.location.reload();
     }
   },
+  // watch:{
+  //   changeLang(){
+  //     let lang = localStorage.getItem("language");
+  //     alert("uslo");
+  //     if(lang == "RS"){
+  //       this.$router.push('');
+  //     }
+  //     else{
+  //       this.$router.push('eng');
+  //     }
+  //   localStorage.setItem("language", this.setLanguage);
+
+  //   }
+  // },
   created(){
+    // localStorage.setItem("language", this.setLanguage);
+    this.setLanguage = localStorage.getItem("language");
+
+    // alert(this.$route.path);
+    let path_route = this.$route.path;
+  
+    let path = path_route.substring(1, path_route.length - 3);
+    
+   
+    if(this.setLanguage == "RS"){
+        this.$router.push(path+ "srb");
+      }
+      else{
+        this.$router.push(path+"eng");
+      }
     localStorage.setItem("language", this.setLanguage);
   }
 };

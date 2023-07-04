@@ -1,12 +1,12 @@
 <template>
   <div v-show="showDropDownMenu" class="dropdown">
     <ul>
-      <router-link to="/home"><li>Početna</li></router-link>
-      <a href="/myAccount"><li>Moj nalog</li></a>
+      <router-link to="/homesrb"><li>Početna</li></router-link>
+      <a href="/myAccountsrb"><li>Moj nalog</li></a>
       <!-- <a href="/arts"><li>Umetnine</li></a> -->
       <li @mouseenter="toggleArts()">Umetnine
         <ul v-show="showArts">
-          <router-link to="/paintings">
+          <router-link to="/paintingssrb">
             <li @mouseenter="togglePaintings()">Slikarstvo
               <ul v-show="showPaintings">
                 <router-link :to="{
@@ -20,7 +20,7 @@
                   params: { id: 2 },}"><li style="font-size: 30px">Mona Liza - Leonardo da Vinči</li></router-link>
               </ul>
             </li></router-link>
-          <router-link to="/sculptures">
+          <router-link to="/sculpturessrb">
             <li @mouseenter="toggleSculptures()">Vajarstvo
               <ul v-show="showSculptures" class="inside">
                 <router-link :to="{
@@ -34,7 +34,7 @@
                   params: { id: 5 },}"><li style="font-size: 30px">Miloska Venera - Aleksandros od Antilohije</li></router-link>
               </ul>
             </li></router-link>
-          <router-link to="/architecture">
+          <router-link to="/architecturesrb">
             <li @mouseenter="toggleArchitecture()">Arhitektura
               <ul v-show="showArchitecture" class="inside">
                 <router-link :to="{
@@ -52,10 +52,10 @@
         </ul>
       </li>
       
-      <router-link to="/exhibition"><li>Izložba</li></router-link>
-      <router-link to="/artists"><li>Umetnici</li></router-link>
-      <router-link to="/contactus"><li>Kontakt</li></router-link>
-      <router-link to="/aboutus"><li>O nama</li></router-link>
+      <router-link to="/exhibitionsrb"><li>Izložba</li></router-link>
+      <router-link to="/artistssrb"><li>Umetnici</li></router-link>
+      <router-link to="/contactussrb"><li>Kontakt</li></router-link>
+      <router-link to="/aboutussrb"><li>O nama</li></router-link>
     </ul>
   </div>
 </template>

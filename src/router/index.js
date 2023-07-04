@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import HomeViewEng from "../views/HomeViewEng.vue";
 import AboutsUsView from "../views/AboutUsView.vue";
 import ExhibitionView from "../views/ExhibitionView.vue";
 import ContactUsView from "../views/ContactUsView.vue";
@@ -20,48 +21,93 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/home",
+    path: "/homesrb",
     name: "home",
     component: HomeView,
   },
   {
-    path: "/aboutus",
-    name: "aboutus",
+    path: "/homeeng",
+    name: "homeEn",
+    component: HomeViewEng,
+  },
+  {
+    path: "/aboutussrb",
+    name: "aboutussrb",
     component: AboutsUsView,
   },
   {
-    path: "/exhibition",
-    name: "exhibition",
+    path: "/aboutuseng",
+    name: "aboutuseng",
+    component: AboutsUsView,
+  },
+  {
+    path: "/exhibitionsrb",
+    name: "exhibitionsrb",
     component: ExhibitionView,
   },
   {
-    path: "/contactus",
-    name: "contactus",
+    path: "/exhibitioneng",
+    name: "exhibitioneng",
+    component: ExhibitionView,
+  },
+  {
+    path: "/contactussrb",
+    name: "contactussrb",
     component: ContactUsView,
   },
   {
-    path: "/artists",
-    name: "artists",
+    path: "/contactuseng",
+    name: "contactuseng",
+    component: ContactUsView,
+  },
+  {
+    path: "/artistssrb",
+    name: "artistssrb",
     component: ArtistsView,
   },
   {
-    path: "/myAccount",
-    name: "myAccount",
+    path: "/artistseng",
+    name: "artistseng",
+    component: ArtistsView,
+  },
+  {
+    path: "/myAccountsrb",
+    name: "myAccountsrb",
     component: MyAccountView,
   },
   {
-    path: "/paintings",
-    name: "paintings",
+    path: "/myAccounteng",
+    name: "myAccounteng",
+    component: MyAccountView,
+  },
+  {
+    path: "/paintingssrb",
+    name: "paintingssrb",
     component: PaintingsView,
   },
   {
-    path: "/sculptures",
-    name: "sculptures",
+    path: "/paintingseng",
+    name: "paintingseng",
+    component: PaintingsView,
+  },
+  {
+    path: "/sculpturessrb",
+    name: "sculpturessrb",
     component: SculptureView,
   },
   {
-    path: "/architecture",
-    name: "architecture",
+    path: "/sculptureseng",
+    name: "sculptureseng",
+    component: SculptureView,
+  },
+  {
+    path: "/architecturesrb",
+    name: "architecturesrb",
+    component: ArchitectureView,
+  },
+  {
+    path: "/architectureeng",
+    name: "architectureeng",
     component: ArchitectureView,
   },
 
