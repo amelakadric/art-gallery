@@ -142,12 +142,11 @@ export default {
   
     let path = path_route.substring(1, path_route.length - 3);
     
-   
     if(this.setLanguage == "RS"){
-        this.$router.push(path+ "srb");
+        this.$router.push(path+ "srb").catch(()=>{});
       }
       else{
-        this.$router.push(path+"eng");
+        this.$router.push(path+"eng").catch(()=>{});
       }
     localStorage.setItem("language", this.setLanguage);
   }

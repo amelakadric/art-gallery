@@ -3,13 +3,21 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import HomeViewEng from "../views/HomeViewEng.vue";
 import AboutsUsView from "../views/AboutUsView.vue";
+import AboutsUsViewEng from "../views/AboutUsViewEng.vue";
 import ExhibitionView from "../views/ExhibitionView.vue";
+import ExhibitionViewEng from "../views/ExhibitionViewEng.vue";
 import ContactUsView from "../views/ContactUsView.vue";
+import ContactUsViewEng from "../views/ContactUsViewEng.vue";
 import ArtistsView from "../views/ArtistsView.vue";
+import ArtistsViewEng from "../views/ArtistsViewEng.vue";
 import MyAccountView from "../views/MyAccountView.vue";
+import MyAccountViewEng from "../views/MyAccountViewEng.vue";
 import PaintingsView from "../views/PaintingsView.vue";
+import PaintingsViewEng from "../views/PaintingsViewEng.vue";
 import SculptureView from "../views/SculptureView.vue";
+import SculptureViewEng from "../views/SculptureViewEng.vue";
 import ArchitectureView from "../views/ArchitectureView.vue";
+import ArchitectureViewEng from "../views/ArchitectureViewEng.vue";
 import ArtworkDetailsView from "../views/ArtworkDetailsView.vue";
 
 Vue.use(VueRouter);
@@ -19,6 +27,16 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/srb",
+    name: "home",
+    component: HomeView,
+  },
+  {
+    path: "/eng",
+    name: "home",
+    component: HomeViewEng,
   },
   {
     path: "/homesrb",
@@ -38,7 +56,7 @@ const routes = [
   {
     path: "/aboutuseng",
     name: "aboutuseng",
-    component: AboutsUsView,
+    component: AboutsUsViewEng,
   },
   {
     path: "/exhibitionsrb",
@@ -48,7 +66,7 @@ const routes = [
   {
     path: "/exhibitioneng",
     name: "exhibitioneng",
-    component: ExhibitionView,
+    component: ExhibitionViewEng,
   },
   {
     path: "/contactussrb",
@@ -58,7 +76,7 @@ const routes = [
   {
     path: "/contactuseng",
     name: "contactuseng",
-    component: ContactUsView,
+    component: ContactUsViewEng,
   },
   {
     path: "/artistssrb",
@@ -68,7 +86,7 @@ const routes = [
   {
     path: "/artistseng",
     name: "artistseng",
-    component: ArtistsView,
+    component: ArtistsViewEng,
   },
   {
     path: "/myAccountsrb",
@@ -78,7 +96,7 @@ const routes = [
   {
     path: "/myAccounteng",
     name: "myAccounteng",
-    component: MyAccountView,
+    component: MyAccountViewEng,
   },
   {
     path: "/paintingssrb",
@@ -88,7 +106,7 @@ const routes = [
   {
     path: "/paintingseng",
     name: "paintingseng",
-    component: PaintingsView,
+    component: PaintingsViewEng,
   },
   {
     path: "/sculpturessrb",
@@ -98,7 +116,7 @@ const routes = [
   {
     path: "/sculptureseng",
     name: "sculptureseng",
-    component: SculptureView,
+    component: SculptureViewEng,
   },
   {
     path: "/architecturesrb",
@@ -108,7 +126,7 @@ const routes = [
   {
     path: "/architectureeng",
     name: "architectureeng",
-    component: ArchitectureView,
+    component: ArchitectureViewEng,
   },
 
   {
