@@ -19,6 +19,7 @@ import SculptureViewEng from "../views/SculptureViewEng.vue";
 import ArchitectureView from "../views/ArchitectureView.vue";
 import ArchitectureViewEng from "../views/ArchitectureViewEng.vue";
 import ArtworkDetailsView from "../views/ArtworkDetailsView.vue";
+import SearchResultView from "../views/SearchResultView.vue";
 
 Vue.use(VueRouter);
 
@@ -133,6 +134,16 @@ const routes = [
     name: "ArtworkDetailsView",
     path: "/artwork/:id",
     component: ArtworkDetailsView,
+  },
+  {
+    name: "SearchResultView",
+    path: "/searchsrb",
+    component: SearchResultView,
+  },
+  {
+    name: "SearchResultView",
+    path: "/searcheng",
+    component: SearchResultView,
   },
 ];
 

@@ -76,11 +76,12 @@ export default {
       sortBy: "name", // Default sorting option
       sortedArts: [], // Initialize as an empty array
       artType: 0,
+      searchParam: 0,
     };
   },
   computed: {
     filteredArts() {
-      let sortedArts = this.allArts.filter((art) => art.type === artType);
+      let sortedArts = this.allArts.filter((art) => art.type === this.artType);
 
       if (this.sortBy === "name") {
         sortedArts = this.sortByName(sortedArts);
@@ -94,11 +95,12 @@ export default {
 
   mounted() {
     this.setBackgroundImage();
+    this.fetchSearchParams();
   },
   methods: {
     setBackgroundImage() {
       this.$refs.backgroundImgRef.setBackgroundImage(
-        "https://i0.wp.com/marcusashley.com/wp-content/uploads/2021/11/red-museum-gallery-wall.jpg?w=640&ssl=1"
+        "https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1195&q=80"
       );
     },
     sortByName(arts) {
@@ -126,6 +128,29 @@ export default {
         }
         return 0;
       });
+    },
+    fetchSearchParams() {
+      const { q, type, searchP } = this.$route.query;
+      console.log(type);
+      this.searchQuery = q || "";
+      this.artType = type || 0;
+      this.searchParam = searchP || 0;
+      this.sortedArts = this.allArts.filter((art) => art.type === this.artType);
+
+      this.searchResult();
+
+      // Perform search or any other actions based on the retrieved query parameters
+    },
+    searchResult() {
+      if (this.searchParam === 0) {
+        this.sortedArts = this.sortedArts.filter((art) =>
+          art.name.includes(this.searchQuery)
+        );
+      } else {
+        this.sortedArts = this.sortedArts.filter((art) =>
+          art.author.includes(this.searchQuery)
+        );
+      }
     },
   },
   watch: {
