@@ -24,15 +24,14 @@
         </div>
         <br /><br />
 
-          <div id="centered-content">
-              <div class="row">
-                <div class="col-sm-12" style="align-items: center;">
-                  <card-component></card-component>
-                </div>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-sm-12 ">
+            <card-component id="card-comp"></card-component>
           </div>
-          <footer-comp></footer-comp>
         </div>
+          
+        </div>
+        <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
@@ -42,6 +41,9 @@
 </template>
 
 <style scoped>
+
+
+
 h1 {
   text-align: center;
   color: white;

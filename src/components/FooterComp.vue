@@ -8,7 +8,11 @@
 <style scoped>
 
     .footer{
-        margin-top: 5px;
+        padding: 20px;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
 
     i{
