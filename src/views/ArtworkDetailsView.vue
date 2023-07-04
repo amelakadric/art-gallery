@@ -1,9 +1,9 @@
 <template>
   <div class="artwork-details">
-    <background-image-component ref="backgroundImgRef" class="text-center">
-      <h1 class="transparent">.</h1>
-      <div class="text-center">
-        <b-card :img-src="artwork.imageUrl" img-center class="mb-4">
+    <background-image-component ref="backgroundImgRef">
+      <h1 class="d-transparent container">.</h1>
+      <div class="text-center col-sm-12">
+        <b-card :img-src="artwork.imageUrl" img-center class="mb-4 col-sm-8">
           <b-card-title class="mt-5"
             ><h2>{{ artwork.title }}</h2></b-card-title
           >
@@ -22,58 +22,64 @@
         </b-card>
       </div>
 
-      <b-row class="col-sm-12 container d-flex flex-row justify-content center">
-        <b-col cols="8" class="col-sm-8 text-center">
-          <div
-            id="listgroup-ex"
-            style="position: relative; overflow-y: auto; height: 300px"
-          >
-            <h2 style="margin-right: 4rem">Ponude</h2>
+      <!-- <CarousselComponent></CarousselComponent> -->
+      <CarousselComponent :imagesList="artwork.imagesList"></CarousselComponent>
 
+      <div class="container col-sm-12 scrolls">
+        <b-row class="col-sm-12">
+          <b-col class="col-sm-6 text-center">
             <div
-              v-for="offer of filteredOffers"
-              :key="offer.id"
-              class="container col-sm-8 text-center"
+              id="listgroup-ex"
+              style="position: relative; overflow-y: auto; height: 300px"
             >
-              <b-card class="cardPonude">
-                <b-card-title class=""
-                  ><h4>Ponuda {{ offer.id }}</h4></b-card-title
-                >
-                <b-card-text>
-                  <p>user: {{ offer.username }}</p>
-                  <p>ponuda: {{ offer.value }}</p>
-                </b-card-text>
-              </b-card>
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row class="col-sm-12 container d-flex flex-row justify-content center">
-        <b-col cols="8" class="col-sm-8 text-center">
-          <div
-            id="listgroup-ex"
-            style="position: relative; overflow-y: auto; height: 300px"
-          >
-            <h2 style="margin-right: 4rem">Poruke</h2>
+              <h2 style="margin-right: 4rem">Ponude</h2>
 
-            <div
-              v-for="message of filteredMessages"
-              :key="message.id"
-              class="container col-sm-8 text-center"
-            >
-              <b-card class="cardPonude">
-                <b-card-title class=""
-                  ><h4>Poruka {{ message.id }}</h4></b-card-title
-                >
-                <b-card-text>
-                  <p>user: {{ message.username }}</p>
-                  <p>poruka: {{ message.text }}</p>
-                </b-card-text>
-              </b-card>
+              <div
+                v-for="offer of filteredOffers"
+                :key="offer.id"
+                class="container col-sm-8 text-center"
+              >
+                <b-card class="cardPonude">
+                  <b-card-title class=""
+                    ><h4>Ponuda {{ offer.id }}</h4></b-card-title
+                  >
+                  <b-card-text>
+                    <p>user: {{ offer.username }}</p>
+                    <p>ponuda: {{ offer.value }}</p>
+                  </b-card-text>
+                </b-card>
+              </div>
             </div>
-          </div>
-        </b-col>
-      </b-row>
+          </b-col>
+
+          <!-- <b-row class=""> -->
+          <b-col class="col-sm-6 text-center">
+            <div
+              id="listgroup-ex"
+              style="position: relative; overflow-y: auto; height: 300px"
+            >
+              <h2 style="margin-right: 4rem">Poruke</h2>
+
+              <div
+                v-for="message of filteredMessages"
+                :key="message.id"
+                class="container col-sm-8 text-center"
+              >
+                <b-card class="cardPonude">
+                  <b-card-title class=""
+                    ><h4>Poruka {{ message.id }}</h4></b-card-title
+                  >
+                  <b-card-text>
+                    <p>user: {{ message.username }}</p>
+                    <p>poruka: {{ message.text }}</p>
+                  </b-card-text>
+                </b-card>
+              </div>
+            </div>
+          </b-col>
+        </b-row>
+      </div>
+      <!-- </b-row> -->
       <FormComponent></FormComponent>
     </background-image-component>
 
@@ -82,6 +88,9 @@
 </template>
 
 <style scoped>
+.scrolls {
+  margin-top: 4rem;
+}
 .artwork-details {
   color: white;
   text-align: center;
@@ -93,7 +102,9 @@ h2 {
 }
 
 .card {
-  margin: 2rem 6rem 2rem;
+  margin: 2rem auto;
+  align-self: center;
+  align-self: center;
   color: white;
   border: 1px solid transparent;
   background-color: rgba(247, 244, 244, 0.1) !important;
@@ -127,6 +138,7 @@ import allMessages from "@/data/messages.js";
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import FormComponent from "@/components/FormComponent.vue";
+import CarousselComponent from "@/components/CarousselComponent.vue";
 export default {
   name: "ArtworkDetailsView",
   props: {
@@ -139,6 +151,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     FormComponent,
+    CarousselComponent,
   },
   data() {
     return {

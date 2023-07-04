@@ -13,6 +13,13 @@
       <br />
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
+        <div>
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select" v-model="sortBy">
+            <option value="name">Name</option>
+            <option value="artist">Artist</option>
+          </select>
+        </div>
         <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
           <router-link
             :to="{
@@ -63,7 +70,7 @@ import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
 
 export default {
-  name: "PaintingsView",
+  name: "SculptureView",
   components: {
     NavBar,
     BackgroundImageComponent,
@@ -72,21 +79,63 @@ export default {
   data() {
     return {
       allArts: allArts,
+      sortBy: "name", // Default sorting option
+      sortedArts: [], // Initialize as an empty array
     };
   },
   computed: {
     filteredArts() {
-      return this.allArts.filter((art) => art.type === 1);
+      let sortedArts = this.allArts.filter((art) => art.type === 1);
+
+      if (this.sortBy === "name") {
+        sortedArts = this.sortByName(sortedArts);
+      } else if (this.sortBy === "artist") {
+        sortedArts = this.sortByAuthor(sortedArts);
+      }
+
+      return sortedArts;
     },
   },
+
   mounted() {
     this.setBackgroundImage();
   },
   methods: {
     setBackgroundImage() {
       this.$refs.backgroundImgRef.setBackgroundImage(
-        "https://www.samsoriginalart.com/cdn/shop/articles/b3564315ec59f69660ce6d5f1cb5bf15.jpg?v=1642480841"
+        "https://i0.wp.com/marcusashley.com/wp-content/uploads/2021/11/red-museum-gallery-wall.jpg?w=640&ssl=1"
       );
+    },
+    sortByName(arts) {
+      return arts.sort((a, b) => {
+        const titleA = a.title.toUpperCase();
+        const titleB = b.title.toUpperCase();
+        if (titleA < titleB) {
+          return -1;
+        }
+        if (titleA > titleB) {
+          return 1;
+        }
+        return 0;
+      });
+    },
+    sortByAuthor(arts) {
+      return arts.sort((a, b) => {
+        const authorA = a.author.toUpperCase();
+        const authorB = b.author.toUpperCase();
+        if (authorA < authorB) {
+          return -1;
+        }
+        if (authorA > authorB) {
+          return 1;
+        }
+        return 0;
+      });
+    },
+  },
+  watch: {
+    sortBy() {
+      this.sortedArts = this.filteredArts;
     },
   },
 };

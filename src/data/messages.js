@@ -2,7 +2,7 @@ let allMessages = [
   {
     id: 0,
     artistName: "Edvard Munk",
-    username: "username123",
+    username: "user123",
     text: "Omiljeni umetnik, cenim vas rad veoma",
   },
   {

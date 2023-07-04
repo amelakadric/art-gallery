@@ -64,6 +64,7 @@ const routes = [
     name: "architecture",
     component: ArchitectureView,
   },
+
   {
     name: "ArtworkDetailsView",
     path: "/artwork/:id",

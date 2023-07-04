@@ -1,16 +1,9 @@
 <template>
-  <div class="architecture">
+  <div class="sculptures">
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
-      <h1>Arhitektura</h1>
-
-      <p class="citation">
-        ,,Arhitektura je izraz vrednosti. Način na koji gradimo je odraz načina
-        na koji živimo”
-        <br />-Norman Foster
-      </p>
-      <br />
+      <h1>Rezultati pretrage</h1>
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div>
@@ -40,7 +33,7 @@
 .citation {
   font-style: italic;
 }
-.architecture {
+.sculptures {
   color: white;
   text-align: center;
   /* margin: 0; */
@@ -70,22 +63,24 @@ import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
 
 export default {
-  name: "PaintingsView",
+  name: "SearchResultView",
   components: {
     NavBar,
     BackgroundImageComponent,
     ArtworkComponent,
   },
+
   data() {
     return {
       allArts: allArts,
       sortBy: "name", // Default sorting option
       sortedArts: [], // Initialize as an empty array
+      artType: 0,
     };
   },
   computed: {
     filteredArts() {
-      let sortedArts = this.allArts.filter((art) => art.type === 2);
+      let sortedArts = this.allArts.filter((art) => art.type === artType);
 
       if (this.sortBy === "name") {
         sortedArts = this.sortByName(sortedArts);
