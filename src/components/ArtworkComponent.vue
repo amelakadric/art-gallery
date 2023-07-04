@@ -33,6 +33,7 @@ img {
 <script>
 export default {
   name: "ArtworkComponent",
+
   props: {
     art: {
       type: Object,
