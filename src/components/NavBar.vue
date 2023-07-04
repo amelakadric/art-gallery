@@ -7,15 +7,21 @@
 
     <!-- search bar -->
     <div id="search-btn-container">
-      <button @click="toggleSearchForm" id="search-btn"><i class="fa fa-search" id="search-icon"></i></button>
+      <button @click="toggleSearchForm()" id="search-btn"><i class="fa fa-search" id="search-icon"></i></button>
     </div>
     <search-bar id="search-bar" ref="searchRef"></search-bar>
+
+    <a @click="changeLanguage()" class="btn" id="language-btn">{{setLanguage}}</a>
   </aside>
 </template>
 
 <style scoped>
   .fa.fa-search{
       color: white;
+  }
+
+  #language-btn{
+    color: white;
   }
 
   #search-btn-container{
@@ -94,13 +100,26 @@ import DropDownMenu from './DropDownMenu.vue'
 export default {
   components: { SearchBar, DropDownMenu },
   name: "NavBar",
+  data(){
+    return{
+      setLanguage: 'RS'
+    }
+  },
   methods: {
     toggleSearchForm() {
       this.$refs.searchRef.toggleSearchForm();
     },
     toggleDropDownMenu(){
       this.$refs.dropDownMenuRef.toggleDropDownMenu();
+    },
+    changeLanguage(){
+      if(this.setLanguage=="RS") this.setLanguage = "ENG";
+      else this.setLanguage="RS";
+      localStorage.setItem("language", this.setLanguage);
     }
+  },
+  created(){
+    localStorage.setItem("language", this.setLanguage);
   }
 };
 </script>
