@@ -1,7 +1,7 @@
 <template>
   <div id="artist">
-    <b-card class="art-card">
-      <div class="row no-gutters">
+    <b-card class="art-card" style="width:40rem">
+      <div class="row no-gutters" id="parent-container">
         <div class="col-md-4">
           <img :src="myartist.photo" alt="Image" class="card-image" />
         </div>
@@ -12,7 +12,10 @@
           </div>
         </div>
         <div class="col-md-4">
-          <button @click="generatePDF()">pdf</button>
+          <!-- <a href="@/assets/Edvard Munch.pdf" target="_blank"> -->
+          <button @click="togglePdf(myartist.pdf)">pdf</button>
+          <pdf-component id="pdf-comp" ref="pdfRef"></pdf-component>
+          <!-- </a> -->
         </div>
       </div>
     </b-card>
@@ -20,29 +23,48 @@
 </template>
 
 <style scoped>
+#parent-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#pdf-comp{
+        position: fixed;
+        top: 55%;
+        left: 81rem;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        padding: 10px;
+}
+
 img {
   width: 100px;
   height: 100px;
 }
+.pdf-object {
+  width: 100%;
+  height: 400px;
+}
 </style>
 
 <script>
+import PdfComponent from './PdfComponent.vue';
 export default {
   name: "ArtistComponent",
+  components:{
+    PdfComponent
+  },
   props: ["myartist"],
+  data(){
+    return{
+      showPdf: false
+    }
+  },
   methods: {
-    generatePDF() {
-      alert("uslo");
-      // var jsonString = localStorage.getItem('allArtists');
-      // var artists = JSON.parse(jsonString);
-
-      //   const options = {
-      //     filename: this.myartist.name + ".pdf",
-      //     margin: 10,
-      //     jsPDF: { format: "a4", orientation: "portrait" },
-      //   };
-      // html2pdf().set(options).from(element).save();
-    },
+    togglePdf(mypdf){
+      this.$refs.pdfRef.togglePdf(mypdf);
+    }
   },
 };
 </script>
