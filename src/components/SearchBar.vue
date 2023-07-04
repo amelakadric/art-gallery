@@ -5,7 +5,7 @@
       <button type="submit">Search</button>
       <div>
         <label for="art-type-select">Art Type:</label>
-        <select id="art-type" v-model="artType" required>
+        <select id="art-type-select" v-model="artType" required>
           <option value="0">Painting</option>
           <option value="1">Sculpture</option>
           <option value="2">Arhchitecture</option>
@@ -14,7 +14,7 @@
       </div>
       <div>
         <label for="art-type-select">Search criteria:</label>
-        <select id="art-type" v-model="searchP" required>
+        <select id="art-type-select" v-model="searchP" required>
           <option value="0">Art name</option>
           <option value="1">Artist name</option>
           <!-- Add more options for different art types -->
@@ -43,9 +43,9 @@ export default {
 
   data() {
     return {
-      q: this.searchQuery,
-      type: this.artType,
-      searchP: this.searchP,
+      searchQuery: "",
+      artType: "0", // Default art type
+      searchP: "0", // Default search criteria
       showSearchForm: false,
     };
   },
@@ -61,6 +61,17 @@ export default {
           searchP: this.searchP,
         },
       });
+      localStorage.setItem(
+        "searchQ",
+        JSON.stringify({
+          q: this.searchQuery,
+          type: this.artType,
+          searchP: this.searchP,
+        })
+      );
+
+      window.location.reload();
+      console.log(this.searchQuery);
     },
     toggleSearchForm() {
       this.showSearchForm = !this.showSearchForm;

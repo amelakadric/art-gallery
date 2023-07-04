@@ -13,7 +13,7 @@
             <option value="artist">Artist</option>
           </select>
         </div>
-        <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
+        <div v-for="art in sortedArts" :key="art.id" class="col-sm-8">
           <router-link
             :to="{
               name: 'ArtworkDetailsView',
@@ -69,6 +69,20 @@ export default {
     BackgroundImageComponent,
     ArtworkComponent,
   },
+  props: {
+    q: {
+      type: String,
+      default: "",
+    },
+    type: {
+      type: Number,
+      default: 0,
+    },
+    searchP: {
+      type: Number,
+      default: 0,
+    },
+  },
 
   data() {
     return {
@@ -81,8 +95,9 @@ export default {
   },
   computed: {
     filteredArts() {
-      let sortedArts = this.allArts.filter((art) => art.type === this.artType);
-
+      let sortedArts = this.sortedArts.filter(
+        (art) => art.type == this.artType
+      );
       if (this.sortBy === "name") {
         sortedArts = this.sortByName(sortedArts);
       } else if (this.sortBy === "artist") {
@@ -130,22 +145,23 @@ export default {
       });
     },
     fetchSearchParams() {
-      const { q, type, searchP } = this.$route.query;
-      console.log(type);
-      this.searchQuery = q || "";
-      this.artType = type || 0;
-      this.searchParam = searchP || 0;
-      this.sortedArts = this.allArts.filter((art) => art.type === this.artType);
+      let query = JSON.parse(localStorage.getItem("searchQ"));
+      this.searchQuery = query.q || "";
+      this.artType = query.type || 0;
+      this.searchParam = query.searchP || 0;
+      this.sortedArts = this.allArts.filter((art) => art.type == this.artType);
 
       this.searchResult();
 
       // Perform search or any other actions based on the retrieved query parameters
     },
     searchResult() {
-      if (this.searchParam === 0) {
-        this.sortedArts = this.sortedArts.filter((art) =>
-          art.name.includes(this.searchQuery)
+      if (this.searchParam == 0) {
+        this.sortedArts = this.sortedArts.filter(
+          (art) => art.title.includes(this.searchQuery)
+          // art.title == this.searchQuery
         );
+        console.log(this.sortedArts);
       } else {
         this.sortedArts = this.sortedArts.filter((art) =>
           art.author.includes(this.searchQuery)
