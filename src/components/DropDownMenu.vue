@@ -10,13 +10,13 @@
             <li @mouseenter="togglePaintings()">{{slikarstvo}}
               <ul v-show="showPaintings">
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 0 },}"><li style="font-size: 30px">{{slika1}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 1 },}"><li style="font-size: 30px">{{slika2}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 2 },}"><li style="font-size: 30px">{{slika3}}</li></router-link>
               </ul>
             </li></router-link>
@@ -24,13 +24,13 @@
             <li @mouseenter="toggleSculptures()">{{vajarstvo}}
               <ul v-show="showSculptures" class="inside">
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 3 },}"><li style="font-size: 30px">{{vaj1}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 4 },}"><li style="font-size: 30px">{{vaj2}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 5 },}"><li style="font-size: 30px">{{vaj3}}</li></router-link>
               </ul>
             </li></router-link>
@@ -38,13 +38,13 @@
             <li @mouseenter="toggleArchitecture()">{{arhitektura}}
               <ul v-show="showArchitecture" class="inside">
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 6 },}"><li style="font-size: 30px">{{arh1}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 7 },}"><li style="font-size: 30px">{{arh2}}</li></router-link>
                 <router-link :to="{
-                  name: 'ArtworkDetailsView',
+                  name: 'ArtworkDetailsViewSrb',
                   params: { id: 8 },}"><li style="font-size: 30px">{{arh3}}</li></router-link>
               </ul>
             </li>
