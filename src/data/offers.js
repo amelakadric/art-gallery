@@ -119,5 +119,23 @@ let allOffers = [
     username: "BarcelonaLover",
     value: "$1,550,000,000",
   },
+  {
+    id: 20,
+    artId: 7,
+    username: "GaudiEnthusiast",
+    value: "$1,700,000,000",
+  },
+  {
+    id: 21,
+    artId: 7,
+    username: "IndianGuy",
+    value: "$1,550,000,000",
+  },
+  {
+    id: 22,
+    artId: 8,
+    username: "user123",
+    value: "$1,550,000,000",
+  },
 ];
 export default allOffers;

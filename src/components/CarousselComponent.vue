@@ -33,12 +33,15 @@ ol {
 .carousel-item {
   /* height: 2rem; */
   /* margin: auto; */
+  max-height: 25rem;
+
   align-self: center;
   width: 100%;
 }
 
 img {
   /* height: 100%; */
+  height: 5rem;
   margin: auto;
 }
 </style>

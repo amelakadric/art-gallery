@@ -83,6 +83,62 @@ let allMessages = [
     username: "SculptureLover789",
     text: "Milonova Venera je vrhunac umetnosti. Hvala vam na ovakvom delu.",
   },
+  {
+    id: 14,
+    artistName: "Antoni Gaudi",
+    username: "ArchitectureFan123",
+    text: "La Sagrada Familia is a true masterpiece that combines grandeur and spirituality. Gaudi's architectural vision is truly remarkable.",
+  },
+  {
+    id: 15,
+    artistName: "Antoni Gaudi",
+    username: "ArtLover789",
+    text: "The unique design of La Sagrada Familia captivates the imagination. Gaudi's genius will forever be remembered through this extraordinary creation.",
+  },
+  {
+    id: 16,
+    artistName: "Antoni Gaudi",
+    username: "ArtEnthusiast456",
+    text: "I am in awe of the beauty and intricacy of La Sagrada Familia. Gaudi's attention to detail is unparalleled.",
+  },
+
+  {
+    id: 17,
+    artistName: "Bonano Pizano",
+    username: "TowerFanatic789",
+    text: "The leaning tower of Pisa is a fascinating architectural wonder. Bonano Pizano's creation defies gravity and captures the imagination.",
+  },
+  {
+    id: 18,
+    artistName: "Bonano Pizano",
+    username: "HistoryEnthusiast123",
+    text: "The leaning tower of Pisa stands as a testament to human ingenuity. Bonano Pizano's masterpiece is an iconic symbol of Italy.",
+  },
+  {
+    id: 19,
+    artistName: "Bonano Pizano",
+    username: "ArtAdmirer456",
+    text: "The leaning tower of Pisa is a captivating sight. Bonano Pizano's architectural marvel continues to inspire awe and wonder.",
+  },
+
+  {
+    id: 20,
+    artistName: "Ustad Ahmad Lahori",
+    username: "ArchitectureLover789",
+    text: "Taj Mahal is a symbol of eternal love and architectural brilliance. Ustad Ahmad Lahori's masterpiece is a testament to the beauty of Mughal architecture.",
+  },
+  {
+    id: 21,
+    artistName: "Ustad Ahmad Lahori",
+    username: "ArtEnthusiast123",
+    text: "The Taj Mahal's ethereal beauty leaves me speechless. Ustad Ahmad Lahori's craftsmanship is truly extraordinary.",
+  },
+  {
+    id: 22,
+    artistName: "Ustad Ahmad Lahori",
+    username: "HistoryBuff456",
+    text: "Taj Mahal stands as a timeless tribute to love and art. Ustad Ahmad Lahori's creation is a marvel that mesmerizes all who behold it.",
+  },
 ];
 
 export default allMessages;
