@@ -142,7 +142,6 @@ export default {
     // alert(this.$route.path);
     let path_route = this.$route.path;
     let param = -1;
-    alert(path_route.substring(path_route.length - 1));
     if(!isNaN(parseInt(path_route.substring(path_route.lastIndexOf("/") + 1)))){
       param = parseInt(path_route.substring(path_route.lastIndexOf("/") + 1));
     }
