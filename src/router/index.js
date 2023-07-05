@@ -19,6 +19,7 @@ import SculptureViewEng from "../views/SculptureViewEng.vue";
 import ArchitectureView from "../views/ArchitectureView.vue";
 import ArchitectureViewEng from "../views/ArchitectureViewEng.vue";
 import ArtworkDetailsView from "../views/ArtworkDetailsView.vue";
+import ArtworkDetailsViewEng from "../views/ArtworkDetailsViewEng.vue";
 import SearchResultView from "../views/SearchResultView.vue";
 import SearchResultViewEng from "../views/SearchResultViewEng.vue";
 
@@ -132,9 +133,14 @@ const routes = [
   },
 
   {
-    name: "ArtworkDetailsView",
-    path: "/artwork/:id",
+    name: "ArtworkDetailsViewSrb",
+    path: "/artworksrb/:id",
     component: ArtworkDetailsView,
+  },
+  {
+    name: "ArtworkDetailsViewEng",
+    path: "/artworkeng/:id",
+    component: ArtworkDetailsViewEng,
   },
   {
     name: "SearchResultView",
