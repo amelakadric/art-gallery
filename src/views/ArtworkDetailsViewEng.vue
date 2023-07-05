@@ -81,7 +81,7 @@
         </b-row>
       </div>
       <!-- </b-row> -->
-      <FormComponent></FormComponent>
+      <FormComponentEng></FormComponentEng>
       <footer-comp></footer-comp>
     </background-image-component>
 
@@ -139,7 +139,7 @@ import allMessages from "@/data/messages.js";
 
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
-import FormComponent from "@/components/FormComponent.vue";
+import FormComponentEng from "@/components/FormComponentEng.vue";
 import CarousselComponent from "@/components/CarousselComponent.vue";
 import FooterComp from "@/components/FooterComp.vue";
 export default {
@@ -153,7 +153,7 @@ export default {
   components: {
     NavBar,
     BackgroundImageComponent,
-    FormComponent,
+    FormComponentEng,
     CarousselComponent,
     FooterComp,
   },
@@ -201,8 +201,9 @@ export default {
       return this.offers.filter((offer) => offer.artId === this.artwork.id);
     },
     filterMessages() {
+      console.log(this.artwork);
       return this.messages.filter(
-        (message) => message.artistName === this.artwork.author
+        (message) => message.artistNameEng == this.artwork.author
       );
     },
   },
