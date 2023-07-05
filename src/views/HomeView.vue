@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <div class="container">
         <br />
         <div class="row">
@@ -25,25 +26,19 @@
         <br /><br />
 
         <div class="row justify-content-center">
-          <div class="col-sm-12 ">
+          <div class="col-sm-12">
             <card-component id="card-comp"></card-component>
           </div>
         </div>
-          
-        </div>
-        <footer-comp></footer-comp>
+      </div>
+      <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
-    
-    
   </div>
 </template>
 
 <style scoped>
-
-
-
 h1 {
   text-align: center;
   color: white;
@@ -61,19 +56,20 @@ h1 {
 <script>
 // @ is an alias to /src
 import NavBar from "@/components/NavBar.vue";
-import CardComponent from '@/components/CardComponent.vue';
-import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue';
-import FooterComp from '@/components/FooterComp.vue'
-import allOffers from '@/data/offers.js'
-import allMessages from '@/data/messages.js'
-
+import CardComponent from "@/components/CardComponent.vue";
+import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
+import FooterComp from "@/components/FooterComp.vue";
+import allOffers from "@/data/offers.js";
+import allMessages from "@/data/messages.js";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 export default {
   name: "HomeView",
   components: {
     NavBar,
     CardComponent,
     BackgroundImageComponent,
-    FooterComp
+    FooterComp,
+    BreadcrumbsComponent,
   },
   created() {
     localStorage.setItem("allOffers", JSON.stringify(allOffers));
@@ -84,7 +80,7 @@ export default {
   mounted() {
     this.setBackgroundImage();
   },
-  
+
   methods: {
     setBackgroundImage() {
       this.$refs.backgroundImgRef.setBackgroundImage(

@@ -20,7 +20,15 @@
 </template>
 
 <style scoped>
+::marker {
+  display: none !important;
+}
 ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+::-webkit-details-marker {
   display: none;
 }
 .carousel {

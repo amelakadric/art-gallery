@@ -2,7 +2,7 @@
   <div class="paintings">
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
-
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <h1>Slikarstvo</h1>
 
       <p class="citation">
@@ -76,6 +76,7 @@ import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue"
 import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
 import FooterComp from "@/components/FooterComp.vue";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 
 export default {
   name: "PaintingsView",
@@ -84,6 +85,7 @@ export default {
     BackgroundImageComponent,
     ArtworkComponent,
     FooterComp,
+    BreadcrumbsComponent,
   },
   data() {
     return {
