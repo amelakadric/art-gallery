@@ -1,7 +1,7 @@
 <template>
   <div class="myAccount">
     <background-image-component ref="backgroundImgRef">
-      <h1>Moj nalog</h1>
+      <h1>My account</h1>
 
       <h2>{{ username }}</h2>
 
