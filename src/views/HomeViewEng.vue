@@ -5,6 +5,12 @@
         <br />
         <div class="row">
           <div class="col-sm-12" style="text-align: center">
+            <img id="logo" src="@/assets/ratio.png">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12" style="text-align: center">
             <h1>Home</h1>
           </div>
         </div>
@@ -43,7 +49,10 @@
 
 <style scoped>
 
-
+#logo{
+  width:70px;
+  height: 70px;
+}
 
 h1 {
   text-align: center;
