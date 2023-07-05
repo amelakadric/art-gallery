@@ -2,6 +2,12 @@
   <div class="home">
     <background-image-component ref="backgroundImgRef">
       <div class="container">
+        <br>
+        <div class="row">
+          <div class="col-sm-12" style="text-align: center">
+            <img id="logo" src="@/assets/ratio.png">
+          </div>
+        </div>
         <br />
         <div class="row">
           <div class="col-sm-12" style="text-align: center">
@@ -42,7 +48,10 @@
 
 <style scoped>
 
-
+#logo{
+  width:70px;
+  height: 70px;
+}
 
 h1 {
   text-align: center;

@@ -16,7 +16,7 @@ const allArtists = [
     {
         id: 2,
         name: "Miron",
-        bio: "Nepoznato",
+        bio: "Unknown",
         photo: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
         pdf: ""
     },
@@ -30,7 +30,7 @@ const allArtists = [
     {
         id: 4,
         name: "Aleksandros of Antilohije",
-        bio: "Nepoznato",
+        bio: "Unknown",
         photo: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png",
         pdf: ""
     },
@@ -44,7 +44,7 @@ const allArtists = [
     {
         id: 6,
         name: "Bonano Pizano",
-        bio: "aktivan 1170-ih i 1180-ih",
+        bio: "active between 1170 and 1180",
         photo: "https://images.findagrave.com/photos/2016/194/125995244_1468432003.jpg",
         pdf: "https://www.issmge.org/uploads/publications/1/30/2001_04_0071.pdf"
     },

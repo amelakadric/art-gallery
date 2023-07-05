@@ -3,14 +3,33 @@
         <background-image-component ref="backgroundImageRef">
             <div class="content">
                 <br>
-                <h1>O nama</h1>
-                <br><br><br>
-                <p>
-                    Ovaj sajt predstavlja projekat za predmet Veb dizajn. Napisacemo neki tekst kasnije.
-                </p>
-                <p>Nagrada 1</p>
-                <p>Nagrada 2</p>
-                <p>Nagrada 3</p>
+                <div class="row">
+                    <div class="col-sm-12" style="text-align: center">
+                        <img id="logo" src="@/assets/ratio.png">
+                    </div>
+                </div>
+                <br>
+                <!-- <h1>O nama</h1> -->
+
+                <div id="centered-content">
+                    <div id="content-txt">
+                        <div class="row">
+                            <div class="col-sm-12" style="text-align: center;">
+                                <h1>O nama</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12" style="text-align: center;">
+                                <p style=" max-width: 40rem;">
+                                Dobrodošli u našu online galeriju! Pristupite različitim umetninama, pišite nam poruke i šaljite ponude - sve na jednom mestu! Informišite se o najnovijim izložbama i pratite naše umetnike.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Najbolji izgled stranice</p>
+                <p>Najpopularnija stranica u oblasti umetnosti</p>
 
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6040.322611252452!2d20.439602769267562!3d44.81863110776904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6545727048c5%3A0xd676a195f8f19372!2z0JzRg9C30LXRmCDRgdCw0LLRgNC10LzQtdC90LUg0YPQvNC10YLQvdC-0YHRgtC4!5e0!3m2!1ssr!2srs!4v1687735484040!5m2!1ssr!2srs" 
@@ -29,6 +48,20 @@
 </template>
 
 <style scoped>
+    #logo{
+  width:70px;
+  height: 70px;
+}
+#centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#content-txt {
+  text-align: justify;
+  width: 600px;
+}
     .about-us{
         text-align: center;
     }
