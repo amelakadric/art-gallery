@@ -23,7 +23,7 @@
         <div v-for="art in filteredArts" :key="art.id" class="col-sm-8">
           <router-link
             :to="{
-              name: 'ArtworkDetailsView',
+              name: 'ArtworkDetailsViewSrb',
               params: { id: art.id },
             }"
           >
