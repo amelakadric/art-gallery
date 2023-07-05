@@ -5,7 +5,8 @@
 
       <h2>{{ username }}</h2>
 
-      <div>
+      <div class="poruke">
+        <h3>My messages</h3>
         <div
           v-for="message of filteredMessages"
           :key="message.id"
@@ -32,10 +33,21 @@
 
 <style scoped>
 h1 {
-  padding: 4rem 2rem;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 5rem;
+  /* margin-right: 4rem; */
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  text-shadow: 3px 2px 1px black;
 }
 h2 {
   margin: 2rem;
+  font-size: 3rem;
+  text-shadow: 3px 2px 1px black;
+}
+.poruke {
+  margin-bottom: 11rem;
 }
 .myAccount {
   color: aliceblue;

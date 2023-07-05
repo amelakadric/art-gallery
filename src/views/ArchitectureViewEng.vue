@@ -3,11 +3,11 @@
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
-      <h1>Arhitektura</h1>
+      <h1>Arhitechture</h1>
 
       <p class="citation">
-        ,,Arhitektura je izraz vrednosti. Način na koji gradimo je odraz načina
-        na koji živimo”
+        ,,Architecture is an expression of values. The way we build is a
+        reflection of the way on which we live”
         <br />-Norman Foster
       </p>
       <br />
@@ -40,6 +40,15 @@
 <style scoped>
 select {
   margin-bottom: 2rem;
+  background-color: rgba(247, 244, 244, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: aliceblue !important;
+}
+
+option {
+  background-color: rgba(85, 73, 73, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: black !important;
 }
 .citation {
   font-style: italic;
@@ -102,7 +111,7 @@ export default {
   methods: {
     setBackgroundImage() {
       this.$refs.backgroundImgRef.setBackgroundImage(
-        "https://i0.wp.com/marcusashley.com/wp-content/uploads/2021/11/red-museum-gallery-wall.jpg?w=640&ssl=1"
+        "https://www.homestratosphere.com/wp-content/uploads/2022/09/amsterdam-photo-sept9.jpg"
       );
     },
     sortByName(arts) {

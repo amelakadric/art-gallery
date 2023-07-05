@@ -4,6 +4,7 @@
       <!-- <div class="shadow-overlay"></div> -->
 
       <h1>Rezultati pretrage</h1>
+      <h2>za '{{ this.searchQuery }}'</h2>
 
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div>
@@ -47,13 +48,13 @@ h1 {
   color: aliceblue;
   text-align: center;
   padding-top: 5rem;
-  margin-right: 4rem;
-  margin-bottom: 2rem;
+  /* margin-right: 4rem; */
+  margin-bottom: 0.5rem;
   font-size: 4rem;
   text-shadow: 3px 2px 1px black;
 }
-p {
-  margin-right: 4rem;
+h2 {
+  margin-bottom: 2rem;
 }
 </style>
 

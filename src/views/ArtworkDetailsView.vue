@@ -28,12 +28,13 @@
       <div class="container col-sm-12 scrolls">
         <b-row class="col-sm-12">
           <b-col class="col-sm-6 text-center">
+            <h2 style="margin-left: 4rem">Ponude</h2>
+            <hr />
+
             <div
               id="listgroup-ex"
               style="position: relative; overflow-y: auto; height: 300px"
             >
-              <h2 style="margin-right: 4rem">Ponude</h2>
-
               <div
                 v-for="offer of filteredOffers"
                 :key="offer.id"
@@ -54,12 +55,12 @@
 
           <!-- <b-row class=""> -->
           <b-col class="col-sm-6 text-center">
+            <h2 style="margin-left: 4rem">Poruke</h2>
+            <hr />
             <div
               id="listgroup-ex"
               style="position: relative; overflow-y: auto; height: 300px"
             >
-              <h2 style="margin-right: 4rem">Poruke</h2>
-
               <div
                 v-for="message of filteredMessages"
                 :key="message.id"

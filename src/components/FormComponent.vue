@@ -1,30 +1,34 @@
 <template>
-  <div class="formComp">
-    <b-form @submit="submitFormOffer">
-      <h3>Ostavite ponudu</h3>
-      <b-form-group label-for="numberInput">
-        <b-form-input
-          class="form-control col-sm-4"
-          id="numberInput"
-          type="text"
-          v-model="numberValue"
-          required
-        ></b-form-input>
-      </b-form-group>
-      <b-button type="submit" variant="dark">Submit</b-button>
-    </b-form>
-    <b-form @submit="submitFormMessage">
-      <h3>Ostavite poruku umetniku</h3>
-      <b-form-group label-for="textareaInput">
-        <b-form-textarea
-          class="form-control"
-          id="textareaInput"
-          v-model="textareaValue"
-          required
-        ></b-form-textarea>
-      </b-form-group>
-      <b-button type="submit" variant="dark">Submit</b-button>
-    </b-form>
+  <div class="formComp container col-sm-12 d-flex flex-row">
+    <div class="col-sm-6">
+      <b-form @submit="submitFormOffer">
+        <h3>Ostavite ponudu</h3>
+        <b-form-group label-for="numberInput">
+          <b-form-input
+            class="form-control col-sm-4"
+            id="numberInput"
+            type="text"
+            v-model="numberValue"
+            required
+          ></b-form-input>
+        </b-form-group>
+        <b-button type="submit" variant="dark" class="mt-4">Submit</b-button>
+      </b-form>
+    </div>
+    <div class="col-sm-6">
+      <b-form @submit="submitFormMessage">
+        <h3>Ostavite poruku umetniku</h3>
+        <b-form-group label-for="textareaInput">
+          <b-form-textarea
+            class="form-control"
+            id="textareaInput"
+            v-model="textareaValue"
+            required
+          ></b-form-textarea>
+        </b-form-group>
+        <b-button type="submit" variant="dark">Submit</b-button>
+      </b-form>
+    </div>
   </div>
 </template>
 
@@ -39,7 +43,7 @@ textarea {
 
 .formComp {
   margin: 2rem auto;
-  width: 30rem;
+  width: 100%;
 }
 </style>
 

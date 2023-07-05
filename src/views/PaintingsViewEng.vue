@@ -3,11 +3,12 @@
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
-      <h1>Slikarstvo</h1>
+      <h1>Painting</h1>
 
       <p class="citation">
-        ,,Slikarstvo je za mene samo sredstvo da zaboravim život.
-        <br />Krik u noći. Suzdržani jecaj. Prigušeni smeh.” <br />-Žorž Ruo
+        ,,,Painting for me is just a means to forget life. A cry in the night.
+
+        <br />A restrained sob. Stifled laughter.” <br />- Georges Rouault
       </p>
       <br />
 
@@ -40,6 +41,15 @@
 <style scoped>
 select {
   margin-bottom: 2rem;
+  background-color: rgba(247, 244, 244, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: aliceblue !important;
+}
+
+option {
+  background-color: rgba(85, 73, 73, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: black !important;
 }
 .citation {
   font-style: italic;

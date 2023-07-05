@@ -20,6 +20,7 @@ import ArchitectureView from "../views/ArchitectureView.vue";
 import ArchitectureViewEng from "../views/ArchitectureViewEng.vue";
 import ArtworkDetailsView from "../views/ArtworkDetailsView.vue";
 import SearchResultView from "../views/SearchResultView.vue";
+import SearchResultViewEng from "../views/SearchResultViewEng.vue";
 
 Vue.use(VueRouter);
 
@@ -141,9 +142,9 @@ const routes = [
     component: SearchResultView,
   },
   {
-    name: "SearchResultView",
+    name: "SearchResultViewEng",
     path: "/searcheng",
-    component: SearchResultView,
+    component: SearchResultViewEng,
   },
 ];
 
