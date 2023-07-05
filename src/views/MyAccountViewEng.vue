@@ -1,28 +1,64 @@
 <template>
   <div class="myAccount">
     <background-image-component ref="backgroundImgRef">
-      <h1>My account</h1>
+      <h1>Moj nalog</h1>
 
       <h2>{{ username }}</h2>
 
-      <div class="poruke">
-        <h3>My messages</h3>
-        <div
-          v-for="message of filteredMessages"
-          :key="message.id"
-          class="container col-sm-8 text-center"
-        >
-          <b-card class="cardPonude">
-            <b-card-title class=""
-              ><h4>Poruka {{ message.id }}</h4></b-card-title
+      <div class="container col-sm-12 scrolls">
+        <b-row class="col-sm-12">
+          <b-col class="col-sm-6 text-center">
+            <h2 style="margin-left: 4rem">Ponude</h2>
+            <hr />
+
+            <div
+              id="listgroup-ex"
+              style="position: relative; overflow-y: auto; height: 300px"
             >
-            <b-card-text>
-              <p>user: {{ message.username }}</p>
-              <p>artist: {{ message.artistName }}</p>
-              <p>message: {{ message.text }}</p>
-            </b-card-text>
-          </b-card>
-        </div>
+              <div
+                v-for="offer of filteredOffers"
+                :key="offer.id"
+                class="container col-sm-8 text-center"
+              >
+                <b-card class="cardPonude">
+                  <b-card-title class=""
+                    ><h4>Offer {{ offer.id }}</h4></b-card-title
+                  >
+                  <b-card-text>
+                    <p>art: {{ offer.artId }}</p>
+                    <p>offer: {{ offer.value }}</p>
+                  </b-card-text>
+                </b-card>
+              </div>
+            </div>
+          </b-col>
+
+          <!-- <b-row class=""> -->
+          <b-col class="col-sm-6 text-center">
+            <h2 style="margin-left: 4rem">Poruke</h2>
+            <hr />
+            <div
+              id="listgroup-ex"
+              style="position: relative; overflow-y: auto; height: 300px"
+            >
+              <div
+                v-for="message of filteredMessages"
+                :key="message.id"
+                class="container col-sm-8 text-center"
+              >
+                <b-card class="cardPonude">
+                  <b-card-title class=""
+                    ><h4>Message {{ message.id }}</h4></b-card-title
+                  >
+                  <b-card-text>
+                    <p>user: {{ message.username }}</p>
+                    <p>message: {{ message.text }}</p>
+                  </b-card-text>
+                </b-card>
+              </div>
+            </div>
+          </b-col>
+        </b-row>
       </div>
       <footer-comp></footer-comp>
     </background-image-component>
@@ -75,6 +111,7 @@ h2 {
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import allMessages from "@/data/messages";
+import allOffers from "@/data/offers";
 import FooterComp from "@/components/FooterComp.vue";
 
 export default {
@@ -87,7 +124,9 @@ export default {
   data() {
     return {
       username: "",
+      offers: null,
       messages: null,
+      filteredOffers: null,
       filteredMessages: null,
     };
   },
@@ -103,6 +142,15 @@ export default {
     console.log(this.messages);
     this.filteredMessages = this.filterMessages();
     console.log(this.filteredMessages);
+
+    const storedOffers = localStorage.getItem("allOffers");
+    if (!storedOffers) {
+      this.offers = allOffers;
+    } else {
+      this.offers = JSON.parse(storedOffers);
+    }
+    this.filteredOffers = this.filterOffers();
+    console.log(this.filteredMessages);
   },
 
   mounted() {
@@ -113,6 +161,9 @@ export default {
       this.$refs.backgroundImgRef.setBackgroundImage(
         "https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1195&q=80"
       );
+    },
+    filterOffers() {
+      return this.offers.filter((offer) => offer.username === this.username);
     },
     filterMessages() {
       return this.messages.filter(
