@@ -1,6 +1,7 @@
 <template>
     <div class="about-us">
         <background-image-component ref="backgroundImageRef">
+            <BreadcrumbsComponent></BreadcrumbsComponent>
             <div class="content">
                 <br>
                 <div class="row">
@@ -75,8 +76,9 @@
 import NavBar from "@/components/NavBar.vue"
 import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue'
 import FooterComp from '@/components/FooterComp.vue'
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 export default {
-  components: { NavBar, BackgroundImageComponent, FooterComp },
+  components: { NavBar, BackgroundImageComponent, FooterComp, BreadcrumbsComponent },
   mounted() {
     this.setBackgroundImage();
   },

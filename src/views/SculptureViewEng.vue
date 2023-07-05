@@ -1,6 +1,7 @@
 <template>
   <div class="sculptures">
     <background-image-component ref="backgroundImgRef" class="text-center">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <!-- <div class="shadow-overlay"></div> -->
 
       <h1>Sculpture</h1>
@@ -76,6 +77,7 @@ import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue"
 import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
 import FooterComp from "@/components/FooterComp.vue";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 
 export default {
   name: "SculptureView",
@@ -84,6 +86,7 @@ export default {
     BackgroundImageComponent,
     ArtworkComponent,
     FooterComp,
+    BreadcrumbsComponent
   },
   data() {
     return {

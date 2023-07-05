@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <div class="container">
         <br />
         <div class="row">
@@ -76,6 +77,7 @@ import FooterComp from '@/components/FooterComp.vue'
 import allOffers from '@/data/offers.js'
 import allMessages from '@/data/messages.js'
 import CardCompEng from '@/components/CardCompEng.vue';
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 
 export default {
   name: "HomeView",
@@ -83,7 +85,8 @@ export default {
     NavBar,
     CardCompEng,
     BackgroundImageComponent,
-    FooterComp
+    FooterComp,
+    BreadcrumbsComponent
   },
   created() {
     

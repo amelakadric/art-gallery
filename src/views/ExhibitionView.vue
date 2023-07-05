@@ -1,6 +1,7 @@
 <template>
   <div class="exhibition">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <div class="content">
         <div class="container">
           <br />
@@ -134,13 +135,14 @@
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import NavBar from "@/components/NavBar.vue";
 import FooterComp from "@/components/FooterComp.vue";
-
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 export default {
   name: "ExhibitionView",
   components: {
     BackgroundImageComponent,
     NavBar,
     FooterComp,
+    BreadcrumbsComponent
   },
   mounted() {
     this.setBackgroundImage();

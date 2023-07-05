@@ -1,6 +1,7 @@
 <template>
   <div class="artwork-details">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <p>.</p>
       <div class="text-center col-sm-12">
         <b-card :img-src="artwork.imageUrl" img-center class="mb-4 col-sm-8">
@@ -142,6 +143,7 @@ import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue"
 import FormComponentEng from "@/components/FormComponentEng.vue";
 import CarousselComponent from "@/components/CarousselComponent.vue";
 import FooterComp from "@/components/FooterComp.vue";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 export default {
   name: "ArtworkDetailsView",
   props: {
@@ -156,6 +158,7 @@ export default {
     FormComponentEng,
     CarousselComponent,
     FooterComp,
+    BreadcrumbsComponent
   },
   data() {
     return {

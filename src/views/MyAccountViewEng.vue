@@ -1,6 +1,7 @@
 <template>
   <div class="myAccount">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
       <h1>My account</h1>
 
       <h2>{{ username }}</h2>
@@ -113,6 +114,7 @@ import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue"
 import allMessages from "@/data/messages";
 import allOffers from "@/data/offers";
 import FooterComp from "@/components/FooterComp.vue";
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 
 export default {
   name: "MyAccountView",
@@ -120,6 +122,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     FooterComp,
+    BreadcrumbsComponent
   },
   data() {
     return {

@@ -1,6 +1,7 @@
 <template>
   <div class="artists">
     <background-image-component ref="backgroundImgRef">
+      <BreadcrumbsComponent></BreadcrumbsComponent>
         <div class="container">
             <br>
             <div class="row">
@@ -53,6 +54,7 @@ import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from '@/components/BackgroundImageComponent.vue';
 import ShowArtists from '@/components/ShowArtists.vue';
 import FooterComp from '@/components/FooterComp.vue';
+import BreadcrumbsComponent from "@/components/BreadcrumbsComponent.vue";
 
 export default {
   name: "HomeView",
@@ -60,7 +62,8 @@ export default {
     NavBar,
     BackgroundImageComponent,
     ShowArtists,
-    FooterComp
+    FooterComp,
+    BreadcrumbsComponent
   },
   mounted(){
     this.setBackgroundImage();
