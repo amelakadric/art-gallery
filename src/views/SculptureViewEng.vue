@@ -3,7 +3,7 @@
     <background-image-component ref="backgroundImgRef" class="text-center">
       <!-- <div class="shadow-overlay"></div> -->
 
-      <h1>Vajarstvo</h1>
+      <h1>Sculptures</h1>
 
       <p class="citation">
         ,,Svaki komad stene ima statuu unutar sebe, a zadatak skulptora je da tu
@@ -15,7 +15,7 @@
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div>
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select" v-model="sortBy">
+          <select id="sort-select" v-model="sortBy" class="form-control">
             <option value="name">Name</option>
             <option value="artist">Artist</option>
           </select>
@@ -37,6 +37,9 @@
   </div>
 </template>
 <style scoped>
+select {
+  margin-bottom: 2rem;
+}
 .citation {
   font-style: italic;
 }

@@ -1,11 +1,27 @@
 <template>
   <div v-show="showSearchForm" class="search-popup">
     <form @submit.prevent="search">
-      <input type="text" v-model="searchQuery" placeholder="Search" required />
-      <button type="submit">Search</button>
+      <div class="input-group">
+        <input
+          class="form-control"
+          type="text"
+          v-model="searchQuery"
+          placeholder="Search"
+          required
+        />
+        <!-- <button type="submit" class="btn btn-primary">Search</button> -->
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
       <div>
         <label for="art-type-select">Art Type:</label>
-        <select id="art-type-select" v-model="artType" required>
+        <select
+          id="art-type-select"
+          v-model="artType"
+          required
+          class="form-select"
+        >
           <option value="0">Painting</option>
           <option value="1">Sculpture</option>
           <option value="2">Arhchitecture</option>
@@ -14,7 +30,12 @@
       </div>
       <div>
         <label for="art-type-select">Search criteria:</label>
-        <select id="art-type-select" v-model="searchP" required>
+        <select
+          id="art-type-select"
+          v-model="searchP"
+          class="form-select"
+          required
+        >
           <option value="0">Art name</option>
           <option value="1">Artist name</option>
           <!-- Add more options for different art types -->
@@ -29,11 +50,13 @@
   position: fixed;
   top: 47%;
   left: 209px;
+  width: 20rem;
   transform: translate(-50%, -50%);
   z-index: 9999;
   background-color: white;
-  padding: 10px;
+  padding: 1rem;
   border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 </style>
 

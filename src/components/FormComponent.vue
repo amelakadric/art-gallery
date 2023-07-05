@@ -4,29 +4,39 @@
       <h3>Ostavite ponudu</h3>
       <b-form-group label-for="numberInput">
         <b-form-input
+          class="form-control col-sm-4"
           id="numberInput"
           type="text"
           v-model="numberValue"
           required
         ></b-form-input>
       </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="dark">Submit</b-button>
     </b-form>
     <b-form @submit="submitFormMessage">
       <h3>Ostavite poruku umetniku</h3>
       <b-form-group label-for="textareaInput">
         <b-form-textarea
+          class="form-control"
           id="textareaInput"
           v-model="textareaValue"
           required
         ></b-form-textarea>
       </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="dark">Submit</b-button>
     </b-form>
   </div>
 </template>
 
 <style scoped>
+input,
+textarea {
+  background-color: rgba(247, 244, 244, 0.1) !important;
+  backdrop-filter: blur(10px);
+  width: 18rem;
+  margin: 1rem auto 0.5rem;
+}
+
 .formComp {
   margin: 2rem auto;
   width: 30rem;

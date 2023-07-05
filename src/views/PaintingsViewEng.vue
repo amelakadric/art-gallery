@@ -14,7 +14,7 @@
       <div class="container col-sm-12 d-flex flex-column align-items-center">
         <div>
           <label for="sort-select">Sort by:</label>
-          <select id="sort-select" v-model="sortBy">
+          <select id="sort-select" v-model="sortBy" class="form-control">
             <option value="name">Name</option>
             <option value="artist">Artist</option>
           </select>
@@ -37,6 +37,9 @@
   </div>
 </template>
 <style scoped>
+select {
+  margin-bottom: 2rem;
+}
 .citation {
   font-style: italic;
 }
@@ -44,9 +47,6 @@
   color: white;
   text-align: center;
   /* margin: 0; */
-}
-.container {
-  margin: 0;
 }
 
 h1 {

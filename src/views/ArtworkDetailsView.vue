@@ -1,7 +1,7 @@
 <template>
   <div class="artwork-details">
     <background-image-component ref="backgroundImgRef">
-      <h1 class="d-transparent container">.</h1>
+      <p>.</p>
       <div class="text-center col-sm-12">
         <b-card :img-src="artwork.imageUrl" img-center class="mb-4 col-sm-8">
           <b-card-title class="mt-5"
