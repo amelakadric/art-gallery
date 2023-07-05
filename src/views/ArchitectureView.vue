@@ -31,6 +31,7 @@
           </router-link>
         </div>
       </div>
+      <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
@@ -53,13 +54,10 @@ h1 {
   color: aliceblue;
   text-align: center;
   padding-top: 5rem;
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
   margin-bottom: 2rem;
   font-size: 4rem;
   text-shadow: 3px 2px 1px black;
-}
-p {
-  margin-right: 4rem;
 }
 </style>
 
@@ -68,6 +66,7 @@ import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
+import FooterComp from "@/components/FooterComp.vue";
 
 export default {
   name: "PaintingsView",
@@ -75,6 +74,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     ArtworkComponent,
+    FooterComp,
   },
   data() {
     return {

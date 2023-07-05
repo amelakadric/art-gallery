@@ -24,6 +24,7 @@
           </router-link>
         </div>
       </div>
+      <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
@@ -61,6 +62,7 @@ import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import ArtworkComponent from "@/components/ArtworkComponent.vue";
 import allArts from "@/data/arts.js";
+import FooterComp from "@/components/FooterComp.vue";
 
 export default {
   name: "SearchResultView",
@@ -68,6 +70,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     ArtworkComponent,
+    FooterComp,
   },
   props: {
     q: {

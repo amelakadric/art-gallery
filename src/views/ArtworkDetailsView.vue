@@ -81,6 +81,7 @@
       </div>
       <!-- </b-row> -->
       <FormComponent></FormComponent>
+      <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
@@ -139,6 +140,7 @@ import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import FormComponent from "@/components/FormComponent.vue";
 import CarousselComponent from "@/components/CarousselComponent.vue";
+import FooterComp from "@/components/FooterComp.vue";
 export default {
   name: "ArtworkDetailsView",
   props: {
@@ -152,6 +154,7 @@ export default {
     BackgroundImageComponent,
     FormComponent,
     CarousselComponent,
+    FooterComp,
   },
   data() {
     return {

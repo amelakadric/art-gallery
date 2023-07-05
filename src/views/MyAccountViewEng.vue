@@ -23,6 +23,7 @@
           </b-card>
         </div>
       </div>
+      <footer-comp></footer-comp>
     </background-image-component>
 
     <NavBar></NavBar>
@@ -62,12 +63,14 @@ h2 {
 import NavBar from "@/components/NavBar.vue";
 import BackgroundImageComponent from "@/components/BackgroundImageComponent.vue";
 import allMessages from "@/data/messages";
+import FooterComp from "@/components/FooterComp.vue";
 
 export default {
   name: "MyAccountView",
   components: {
     NavBar,
     BackgroundImageComponent,
+    FooterComp,
   },
   data() {
     return {
