@@ -152,6 +152,9 @@ export default {
       this.mojnalog = "Moj nalog";
       this.umetnine = "Umetnine";
       this.slikarstvo = "Slikarstvo";
+      this.arhitektura = "Arhitektura";
+      this.vajarstvo = "Vajarstvo";
+      this.izlozba = "Izložba";
       this.slika1 = "Vrisak - Edvund Mund";
       this.slika2 = "Poslednja večera - Leonardo da Vinči";
       this.slika3 = "Mona Liza - Leonardo da Vinči";
@@ -163,6 +166,7 @@ export default {
       this.arh3 = "Taj Mahal - Ustad Ahmad Lahori";
       this.kontakt = "Kontakt";
       this.onama = "O nama";
+      this.umetnici = "Umetnici";
     }
     else{
       this.pocetna = "Home";
@@ -181,8 +185,9 @@ export default {
       this.arh2 = "Leaning Tower of Pisa - Bonano Pizano";
       this.arh3 = "Taj Mahal - Ustad Ahmad Lahori";
       this.izlozba = "Exhibition";
-       this.kontakt = "Contact";
+      this.kontakt = "Contact";
       this.onama = "About us";
+      this.umetnici = "Artists";
     }
   }
 };
