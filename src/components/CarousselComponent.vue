@@ -35,22 +35,24 @@ ol {
   align-self: center;
   margin: 0 auto 6rem;
   text-align: center;
-  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  height: auto;
   width: 20rem;
 }
 .carousel-item {
   /* height: 2rem; */
   /* margin: auto; */
-  max-height: 25rem;
-
-  align-self: center;
+  /* max-height: rem; */
+  margin-top: auto;
   width: 100%;
 }
 
 img {
   /* height: 100%; */
-  height: 5rem;
-  margin: auto;
+  /* height: 5rem; */
+  align-self: center;
 }
 </style>
 

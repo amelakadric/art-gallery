@@ -45,6 +45,7 @@ let allArts = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqb3ZtO2sYQvWpBr8dCNlbL8-3bBL6HGQjoQ&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyVNVHtSi2mekDUhbfKxHPHVzQGN_AJEMwiTA19-XvB24M3c5Hy_RYT_5F0V1y6agP7A&usqp=CAU",
       "https://025info.rs/wp-content/uploads/2022/05/Mona-Liza.jpg",
+      "https://media.tenor.com/dxguKWd-nugAAAAC/mona-lisa-mona-mona-lisa.gif",
     ],
   },
   {
