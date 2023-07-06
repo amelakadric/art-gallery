@@ -9,7 +9,7 @@
       <div class="container col-sm-12 scrolls">
         <b-row class="col-sm-12">
           <b-col class="col-sm-6 text-center">
-            <h2 style="margin-left: 4rem">Ponude</h2>
+            <h2 style="margin-left: 4rem">Offers</h2>
             <hr />
 
             <div
@@ -36,7 +36,7 @@
 
           <!-- <b-row class=""> -->
           <b-col class="col-sm-6 text-center">
-            <h2 style="margin-left: 4rem">Poruke</h2>
+            <h2 style="margin-left: 4rem">Messages</h2>
             <hr />
             <div
               id="listgroup-ex"
@@ -122,7 +122,7 @@ export default {
     NavBar,
     BackgroundImageComponent,
     FooterComp,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
   },
   data() {
     return {
