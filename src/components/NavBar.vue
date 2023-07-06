@@ -142,28 +142,24 @@ export default {
     // alert(this.$route.path);
     let path_route = this.$route.path;
     let param = -1;
-    if(!isNaN(parseInt(path_route.substring(path_route.lastIndexOf("/") + 1)))){
+    if (
+      !isNaN(parseInt(path_route.substring(path_route.lastIndexOf("/") + 1)))
+    ) {
       param = parseInt(path_route.substring(path_route.lastIndexOf("/") + 1));
     }
     let path = path_route.substring(1, path_route.length - 3);
 
     if (this.setLanguage == "RS") {
-
-      if(param != -1){
+      if (param != -1) {
         path = path_route.substring(1, path_route.length - 5);
         // this.$router.push({ path: ``, params: { id: param }}).catch(() => {});
-        this.$router.replace({ path: `/${path}srb/${param}`}).catch(() => {});
-      }
-      else
-        this.$router.replace(path + "srb").catch(() => {});
+        this.$router.replace({ path: `/${path}srb/${param}` }).catch(() => {});
+      } else this.$router.replace(path + "srb").catch(() => {});
     } else {
-
-      if(param != -1){
+      if (param != -1) {
         path = path_route.substring(1, path_route.length - 5);
-        this.$router.replace({ path: `/${path}eng/${param}`}).catch(() => {});
-      }
-      else
-        this.$router.replace(path + "eng").catch(() => {});
+        this.$router.replace({ path: `/${path}eng/${param}` }).catch(() => {});
+      } else this.$router.replace(path + "eng").catch(() => {});
     }
 
     localStorage.setItem("language", this.setLanguage);
